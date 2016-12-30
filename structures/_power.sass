@@ -1,0 +1,176 @@
+/* ==========================================================================
+   撰寫electricity information
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.valuation
+	display: flex
+
+.power_title
+	font-size: $font-size_14
+	text-align: center
+
+.power_value	
+	font-size: $font-size_48
+	text-align: center
+	
+/*計價訊息 start*/
+
+.electricity
+	width: 80%
+	margin: 33px auto
+	height: 360px
+	+flex(column, space-between, center)
+
+.electricity_first
+	width: 100%
+	height: 33%
+	+flex(column,space-between,center)
+
+.electricity_first_title
+	width: 80%
+	margin: 0 auto
+	+flex(row, space-between, center)
+
+.electricity_first_value
+	width: 100%
+	margin: 0 auto
+	+flex(row, space-between, center)
+
+.electricity_second_content
+	width: 75%
+	+flex(row, space-around, center)
+
+.electricity_third
+	width: 100%
+	+flex(row, space-between, center)
+
+.electricity_third_content
+	width: 88%
+	border-bottom-left-radius: $b-borderRadius_3
+	border-top-left-radius: $b-borderRadius_3
+	padding: 19px 0 23px 0
+	background-color: $green_opacity_80
+	> div
+		width: 87%
+		+flex(row,space-around,center) 
+
+.electricity_third_send
+	+background_image($imageUrl_home, 'true', 'btn_notice', '' , '', '', 'png', 90,60)
+	border-bottom-right-radius: $b-borderRadius_3
+	border-top-right-radius: $b-borderRadius_3
+	background-color: $green_opacity_80
+	&:hover
+		background-color: $green
+
+.analysis
+	@extend %ccc
+
+.analysis_top
+	width: 100%
+	display: flex
+	
+.local
+	display: flex
+	flex-direction: column
+
+.local_content
+	padding: 15% 0 0 13%
+	display: flex
+
+.local_content_block
+	width: 336px
+
+.local_content_control
+	+flex(column, center, center)
+	
+.UpImage 
+	margin-bottom: 20px
+	cursor: pointer
+	+background_image($imageUrl_home, 'true', 'btn_up_n', 'btn_up_a' , '', '', 'png',30,30)
+
+.DownImage 
+	cursor: pointer
+	+background_image($imageUrl_home, 'true', 'btn_down_n', 'btn_down_a' , '', '', 'png',30,30)
+
+.box
+	border: $b-size_2 $white solid
+	border-radius: $b-borderRadius_3
+	padding: 19px 0 19px 0
+	box-sizing: border-box
+	text-align: center
+
+/*計價訊息 end*/
+
+/*電費儲值 end*/
+
+.electricityBonus
+	width: 62%
+	height: 410px
+	margin: 25px auto
+	+flex(column,space-between,center)
+	&:not(:first-child)
+		margin: 30px auto
+
+.electricityBonus_title
+	padding: 0 0 25px 0
+	+flex(row,center,center)
+
+.electricityBonus_content
+	line-height: 10em
+	width: 100%
+	+flex(row,space-between,center)
+	flex-wrap: wrap
+
+.electricityBonus_content_first
+	width: 100%
+	+flex(row, space-between, center)
+
+.electricityBonus_content_second
+	width: 100%
+	+flex(row, flex-end, center)
+
+.electricityBonus_content_item
+	+flex(row,center,center)
+
+.electricityBonus_button
+	display: flex
+	margin: 45px 0 0 auto
+	width: 55%
+
+/*電費儲值 end*/
+
+/*簡訊管理 start*/
+
+.message
+	width: 70%
+	height: 450px
+	margin: 0 auto
+	+flex(row,space-between,center)
+
+.message_content
+	width: 100%
+	+flex(row,space-between,center)
+
+.message_content_item
+	+flex(row,center,center)
+
+.message_Bonus
+	+background_image($imageUrl_home, 'true', 'btn_save_n', 'btn_save_h' , '', '', 'png',90,60)
+	margin-left: 1px
+
+/*簡訊管理 end*/
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.box--l
+	width: 100%
+
+.box--m
+	width: 47%
+

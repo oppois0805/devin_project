@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard_demo</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo">
+                <div class="l-menu_logo_image">
+                    <img src="images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title">
+                    <span class="l-title">
+                        系统管理员
+                    </span>
+                    <span class="l-title"> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <div class="l-menu_nav">
+                <div class="l-menu_nav_light active"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="dropdown">
+                        <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                        <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                    <div class="dashboard_top">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titlebuilding.png" alt="">
+                                    <span class="title">建物指標</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titleelectronic.png" alt="">
+                                    <span class="title">電力資訊</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titleair.png" alt="">
+                                    <span class="title">空調系統</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titlesurrounding.png" alt="">
+                                    <span class="title">環境資訊</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titlesafety.png" alt="">
+                                    <span class="title">安防資訊</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="button-group mla">
+                            <div class="button-back"></div>
+                            <div class="button-edit  button--gutter_left"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="dashboard_content">
+                        <div class="dashboard_content_top mla">
+                            <a id="LeftArrow"></a>
+                            <a id="RightArrow"></a>
+                        </div>
+                        <div class="dashboard_content_bottom">
+                            <ul class="bxslider">
+                                <li>
+                                    <div class="test">
+                                        <!-- 即時氣象 -->
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1 env_met_1x1--empty" name="weather" data-style="opacity">
+                                                    <div>
+                                                        <div>
+                                                            <span class="js-time">N/A</span>
+                                                            <div>
+                                                                <div class="js-temperature">
+                                                                    N/A
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span class="js-date">N/A</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span class="js-location">N/A</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3 env_met_1x3--empty" name="weather" data-style="opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span class="js-time">N/A</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="js-date">N/A</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span class="js-location">N/A</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="js-weekWeather">
+                                                                <div id="container6" class="js-weekChart" style="min-width: 285px; height: 110px; margin: -20px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="js-temperature">
+                                                                N/A
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x2  env_met_1x2--empty" name="weather" data-style="opacity">
+                                                    <div>
+                                                        <div class="js-weekWeather">
+                                                            <div id="container" class="js-weekChart" style="min-width: 290px; height: 110px; margin: -20px auto"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>室內環境</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content" name="environment">
+                                                <div class="env_1x1">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>溫度</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">0</span>
+                                                                        <span>°C</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature  js-progress_temperature" data-maxvalue="50" unit="°C" data-width="147" data-color='"#54b8e2", "#fee655","#f06846"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>濕度</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">0</span>
+                                                                        <span>%</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature  js-progress_humidity" data-maxvalue="100" unit="°C" data-width="147" data-color='"#54b8e2","#d8ecf5"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>CO2</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">0</span>
+                                                                        <span>ppm</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature  js-progress_CO2" data-maxvalue="50" unit="°C" data-width="147" data-color='"#54b8e2", "#a2a2a2"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>室外環境</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content" name="environment">
+                                                <div class="env_1x2">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>溫度</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature  js-progress_temperature" data-maxvalue="50" unit="°C" data-width="167" data-color='"#54b8e2", "#fee655", "#f06846"' name="progress"></div>
+                                                                    <span>50</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">0</span>
+                                                                    <span>°C</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>濕度</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature  js-progress_humidity" data-maxvalue="100" unit="°C" data-width="167" data-color='"#54b8e2", "#d8ecf5"' name="progress"></div>
+                                                                    <span>100</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">0</span>
+                                                                    <span>%</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>pm2.5</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature  js-progress_pm25" data-maxvalue="500" unit="°C" data-width="167" data-color='"#54b8e2", "#a2a2a2"' name="progress"></div>
+                                                                    <span>500</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">0</span>
+                                                                    <span>ppm</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1_empty" name="pm25" data-style="opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="js-pm25_value">N/A</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--網頁內容Tab End-->
+                </div>
+        </aside>
+        <!--網頁內容 End-->
+        </div>
+        <div class="modal fade" id="myAddtimeModal" role="dialog">
+            <div class="modal-dialog  modal-dialog--addtime">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <span class="modal-title_main_title">設定</span>
+                        </div>
+                        <hr />
+                    </div>
+                    <div class="modal-body">
+                        <div class="DialogContent">
+                            標題
+                            <input type="text" id="main-title">
+                            <br>
+                        </div>
+                        <div class="modal-footer">
+                            <hr />
+                            <button type="button" class="btn btn-primary" id="save-setting">儲存</button>
+                            <button type="button" class="btn  btn-default" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/bootstrap/bootstrap.js"></script>
+        <script src="js/echarts.common.min.js"></script>
+        <script src="js/jquery.simpleWeather.min.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/gauge.min.js"></script>
+        <script src="js/echarts.min.js"></script>
+        <script src="js/gradient-progress-bar.js"></script>
+        <script src="js/circle-progress.min.js"></script>
+        <script src="js/dashboard.js"></script>
+        <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyArwqZpo0MAheT7PcOH8KztkZ9gdwo20OI&sensor=false"></script>
+        <script>
+        $(function() {
+            var test = '';
+            test += '[';
+            for(var i=1;i<=12;i++)
+            {
+                for(var j=1;j<=12;j++){
+                    test+= '\'' + i + '/' + j + '/' + '2016' +'\',';
+                }
+            }
+            test += ']';
+            console.log(test);
+
+            var option = {
+                $weatherWidget: $("div[name=weather]"),
+                $pm25Widget: $("div[name=pm25]"),
+                $time: $(".js-time"),
+                $date: $(".js-date"),
+                $weekWeather: $(".js-weekWeather"),
+                $temperature: $(".js-temperature"),
+                $location: $(".js-location"),
+                progress: [{
+                    $temperature: $(this).find(".js-progress_temperature")
+                }, {
+                    $humidity: $(this).find(".js-progress_humidity")
+                }, {
+                    $pm25: $(this).find(".js-progress_pm25")
+                }, {
+                    $CO2: $(this).find(".js-progress_CO2")
+                }]
+            }
+            dashboard.init(option);
+        });
+
+        //切換頁面
+        $('.bxslider').bxSlider({
+            startSlide: 1,
+            hideControlOnEnd: false,
+            minSlides: 1,
+            maxSlides: 1,
+            slideWidth: 1090,
+            prevText: '<div class="button-left"></div>',
+            nextText: '<div class="button-right button--gutter_left"></div>',
+            nextSelector: '#RightArrow',
+            prevSelector: '#LeftArrow',
+            slideMargin: 10
+        });
+        </script>
+</body>
+
+</html>

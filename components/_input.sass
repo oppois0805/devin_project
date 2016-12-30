@@ -1,0 +1,93 @@
+/* ==========================================================================
+   撰寫input
+   ========================================================================== */
+
+$in_size_height: 45px
+$in_size_height_message: 90px
+$in_size_l_width: 280px
+$in_size_m_width: 240px
+$in_size_message_width: 180px
+$in_size_file_width: 235px
+// $width_s: 65px
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%border-left
+	border-bottom-left-radius: 3px !important
+	border-top-left-radius: 3px !important
+	border-top-right-radius: 0 !important 
+	border-bottom-right-radius: 0 !important
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.input
+	height: $in_size_height
+	background-color: $white_opacity_40
+	border: 0
+	box-sizing: border-box
+	font-size: $font-size_16
+	border-radius: $b-borderRadius_3
+	text-align: center
+	&:hover
+		background-color: $white_opacity_80
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.input--l
+	width: $in_size_l_width
+
+.input--m
+	width: $in_size_m_width
+
+.input--disable
+	background-color: $black_opacity_10
+	&:hover
+		background-color: $black_opacity_10 !important
+
+.input--danger
+	background-color: $red
+	&:hover
+		background-color: $red !important
+		
+//for saving,目前沒使用
+// .input--m
+// 	width: $width-m
+// 	font-size: $font-size_14
+
+// .input--s
+// 	width: $width-s
+// 	font: $font-size_12 "segoe ui",arial,sans-serif
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.input-modal
+	height: $in_size_height
+	text-align: left
+	background-color: $black_opacity_10 
+	&:hover
+		background-color: $black_opacity_5
+
+.input-box
+	height: $in_size_height_message
+	font-size: $font-size_48
+
+.input-balance
+	height: $in_size_height_message
+	width: $in_size_message_width
+	font-size: $font-size_48
+	@extend %border-left
+
+.input-search
+	@extend %border-left
+
+.input-file
+	width: $in_size_file_width
+	@extend %border-left

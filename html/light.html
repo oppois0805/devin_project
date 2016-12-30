@@ -1,0 +1,177 @@
+<!-- @@master  = layout/layout.html-->
+<!-- @@block  =  title-->
+<title>light</title>
+<!-- @@close-->
+<!-- @@block  =  content-->
+<!--網頁內容Top Start-->
+<div class="l-wrapper_content_top">
+    <select class="selectpicker  select  select--l">
+        <option class="option">A棟</option>
+        <option class="option">B棟</option>
+        <option class="option">...</option>
+    </select>
+    <select class="selectpicker select  select--l select--gutter_left">
+        <option class="option">1樓</option>
+        <option class="option">2樓</option>
+        <option class="option">...</option>
+    </select>
+</div>
+<!--網頁內容Top End-->
+<!--網頁內容Tab Start-->
+<div class="l-wrapper_bottom_content">
+    <div class="nb nb-l">
+        <ul class="nb_ul">
+            <li id="information" class="nb_li nb_li--active"><span class="nb_span">即时资讯</span></li>
+            <li id="analysis" class="nb_li"><span class="nb_span">系统分析</span>
+            </li>
+        </ul>
+        <div class="nb_border">
+            <div id="Tab_border" class="nb_line  nb_line-half"></div>
+        </div>
+        <div class="nb_hr"></div>
+        <div class="nb_content">
+            <div id="information_content" class="information is-show">
+                <img data-toggle="modal" data-target="#myModal" style="width:100%" src="../images/3_schedule/img_plan_fake.png" alt=" ">
+            </div>
+            <div id="analysis_content" class="analysis  is-hide">
+                <div class="analysis_top">
+                    <select class="selectpicker  select  select--m">
+                        <option class="option">圖表1</option>
+                        <option class="option">圖表2</option>
+                        <option class="option">...</option>
+                    </select>
+                    <select class="selectpicker  select  select--m select--gutter_left">
+                        <option style="width:1;height:21px" class="option">2016年</option>
+                        <option class="option">2015年</option>
+                        <option class="option">2014年</option>
+                        <option class="option">...</option>
+                    </select>
+                    <select class="selectpicker  select  select--m select--gutter_left">
+                        <option class="option">樓層選單</option>
+                        <option class="option">1樓</option>
+                        <option class="option">2樓</option>
+                        <option class="option">...</option>
+                    </select>
+                    <select class="selectpicker  select  select--m select--gutter_left">
+                        <option class="option">樓層選單</option>
+                        <option class="option">1樓</option>
+                        <option class="option">2樓</option>
+                        <option class="option">...</option>
+                    </select>
+                    <div class="button-report mla"></div>
+                </div>
+                <div class="analysis_content">
+                    <div class="echart echart--l" id="main"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- @@close-->
+<!-- @@block  =  js-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bootstrap/bootstrap.js"></script>
+<script src="js/bootstrap/bootstrap-slider.js"></script>
+<script src="js/bootstrap/bootstrap-select.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script src="js/Action.js"></script>
+<script>
+$(function() {
+    $("#menu").menu({
+        classes: {
+            "ui-menu": "highlight"
+        }
+    });
+});
+
+$("input[name=ProgressBar]").each(function() {
+    new Slider("#" + $(this).attr("id"), {
+        min: 0,
+        max: 100,
+        value: 0,
+        step: 10,
+        tooltip_position: 'bottom'
+    });
+});
+$("input[name=ProgressBar]").on("change", function() {
+    $(this).parent().parent().parent().find('span[name=ProgressPercent]').text($(this).parent().parent().parent().find(".tooltip-inner").text() + '%');
+});
+//remove tooltip
+$(".tooltip").each(function() {
+    $(this).css('display', 'none');
+});
+</script>
+<script>
+$("#information").click(function(event) {
+    $("#information_content").removeClass('is-hide').addClass('is-show');
+    $("#analysis_content").removeClass('is-show').addClass('is-hide');
+});
+
+$("#analysis").click(function(event) {
+    $("#information_content").removeClass('is-show').addClass('is-hide');
+    $("#analysis_content").removeClass('is-hide').addClass('is-show');
+});
+</script>
+<script>
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+
+
+// 指定图表的配置项和数据
+var option = {
+    grid: {
+        show: true,
+        bottom: 50
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    }],
+    yAxis: [{
+        type: 'value',
+        name: '水量',
+        min: 0,
+        max: 250,
+        interval: 50,
+        axisLabel: {
+            formatter: '{value} ml'
+        }
+    }, {
+        type: 'value',
+        name: '温度',
+        min: 0,
+        max: 25,
+        interval: 5,
+        axisLabel: {
+            formatter: '{value} °C'
+        }
+    }],
+    series: [
+
+        {
+            name: '蒸发量',
+            type: 'bar',
+            data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+        }, {
+            name: '降水量',
+            type: 'bar',
+            data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+        }, {
+            name: '平均温度',
+            type: 'line',
+            yAxisIndex: 1,
+            data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+        }
+    ]
+};
+
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+<!-- @@close-->

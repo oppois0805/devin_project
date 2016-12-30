@@ -1,0 +1,37 @@
+/* ==========================================================================
+   撰寫table
+   ========================================================================== */
+
+$class-slug: grid !default
+$table_th_height: 45px
+$table_td_height: 60px
+
+$table_width: 100%
+$grid_number: 12
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.table
+	padding-top: 15px
+	> table
+		width: 100%
+
+.table tr
+	> th
+		height: $table_th_height
+		text-align: center
+		border-bottom: 2px black solid
+
+.table tr
+	> td
+		height: $table_td_height
+		text-align: center
+		border-bottom: 1px rgba(8, 26, 46, 0.2) solid
+
+@for $i from 1 through $grid_number
+	.#{$class-slug}-#{($grid_number + 1) - $i}
+		text-align: center
+		height: $table_td_height
+		width: ($table_width / $grid_number) * (13 - $i)

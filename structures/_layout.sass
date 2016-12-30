@@ -1,0 +1,151 @@
+/* ==========================================================================
+   建構網頁框架:
+   1.左、右側框架
+   2.左、右側nav
+   ========================================================================== */
+
+/* 最外側容器
+   ========================================================================== */
+.l-wrap
+	height: 		 768px
+	width: 		     1366px
+	margin: 		 0 auto
+	display: 		 flex
+ 
+/* 左側內容
+ 	========================================================================== */
+.l-menu
+	background-color: $black_opacity_60
+	border-bottom-left-radius: $b-borderRadius_11
+
+.l-menu_logo
+	height: 26.4%
+	+flex(column, space-between, center)
+
+.l-menu_logo_image
+	padding-top: 31px    
+
+.l-menu_logo_title
+	+flex(column, center, center)
+
+.l-menu_logo_menuimage
+	width: image-width('images/navigation/img_sidenav_mainmenu.png')
+	height: image-height('images/navigation/img_sidenav_mainmenu.png')
+
+.l-menu_nav div
+	color: transparent
+
+.l-menu_nav_light
+	+background_image($imageUrl_nav, 'true','tab_sidenav_light_n','tab_sidenav_light_f','tab_sidenav_light_f','tab_sidenav_light_f','png',70,250)
+	
+.l-menu_nav_Air
+	+background_image($imageUrl_nav, 'true' ,'tab_sidenav_ac_n', 'tab_sidenav_ac_f', 'tab_sidenav_ac_f', 'tab_sidenav_ac_f','png',70,250)
+
+.l-menu_nav_power
+	+background_image($imageUrl_nav, 'true' ,'tab_sidenav_energy_n' ,'tab_sidenav_energy_f' ,'tab_sidenav_energy_f' ,'tab_sidenav_energy_f','png',70,250)
+
+.l-menu_nav_curtain
+	+background_image($imageUrl_nav, 'true' ,'tab_sidenav_curtain_n' ,'tab_sidenav_curtain_f' ,'tab_sidenav_curtain_f' ,'tab_sidenav_curtain_f','png',70,250)
+
+.l-title
+	font-size: $font-size_18
+	text-align: center
+	padding-top: 6px
+	color: $white_opacity_80
+
+.l-menu 
+	// 最外層menu
+	> .l-menu_nav.ui-widget-content	
+		border: 0px solid transparent
+		background: transparent
+		color: transparent
+		// 所有menu旁的箭頭
+		& .ui-menu-item-wrapper .ui-icon
+			padding-right: 5px
+			background-image: url(../images/ui-icons_ebccce_256x240.png)
+		> li > ul .ui-menu-item-wrapper.ui-state-active .ui-icon
+			background-image: url(../images/ui-icons_444444_256x240.png)
+		> li > div
+			height: 98%
+	// 展開的所有ul
+	> .l-menu_nav.ui-widget-content	ul
+		animation: fadein .5s
+		background: $navyblue
+		border: 0
+		z-index: 9999
+		& li
+			color: $white 
+			font-size: 15px 
+			list-style-image: none
+			width: 160px
+			height: 55px
+			&:hover
+				color: $navyblue 
+				background-color: #f5f5f5 
+			& .ui-menu-item-wrapper
+				+flex(row, center, center)
+				transition: background .5s
+				color: $white
+				padding: 0
+			& .ui-menu-item-wrapper.ui-state-active 
+				background-color: $white
+				color: $navyblue
+			& div
+				height: 100% 
+				text-align: center 
+				font-size: $font-size_18 
+
+.l-menu 
+	> .ui-state-active, 
+	.ui-widget-content .ui-state-active,
+	.ui-widget-header .ui-state-active, 
+	a.ui-button:active, .ui-button:active,
+	.ui-button.ui-state-active
+		border: 0 solid #003eff
+		background: transparent
+		font-weight: normal
+		color: $navyblue
+		&:hover
+			border: 0 solid #003eff
+			background: transparent
+			font-weight: normal
+			color: transparent
+
+/* 右側內容
+   ========================================================================== */
+.l-wrapper
+	width: 81.7%
+
+.l-wrapper_nav
+	height: 9.2%
+	background-color: $black_opacity_60
+	display: flex
+
+.l-wrapper_content
+	height: 90.9%
+	padding: 20px 20px 0 20px 
+	box-sizing: border-box
+	background-color: $white_opacity_60
+
+.l-wrapper_content_top
+	display: flex
+	
+.l-wrapper_bottom_content
+	padding-top: 15px
+	position: relative
+
+.l-wrapper_nav_home
+	+background_image($imageUrl_nav, 'false','tab_topnav_home_n' ,'tab_topnav_home_h' ,'tab_topnav_home_f' ,'tab_topnav_home_f','png',71,85)
+
+.l-wrapper_nav_message
+	+background_image($imageUrl_nav, 'false','tab_topnav_message_n' ,'tab_topnav_message_h' ,'tab_topnav_message_f' ,'tab_topnav_message_f','png',71,85)
+
+.l-wrapper_nav_schedule
+	+background_image($imageUrl_nav, 'false','tab_topnav_schedule_n' ,'tab_topnav_schedule_h' ,'tab_topnav_schedule_f' ,'tab_topnav_schedule_f','png',71,85)
+
+.l-wrapper_nav_setting
+	+background_image($imageUrl_nav, 'false','tab_topnav_setting_n' ,'tab_topnav_setting_h' ,'tab_topnav_setting_f' ,'tab_topnav_setting_f','png',71,85)
+
+.l-wrapper_nav_logout
+	+background_image($imageUrl_nav, 'false','tab_topnav_signout_n' ,'tab_topnav_signout_h' ,'tab_topnav_signout_f' ,'tab_topnav_signout_f','png',71,85)
+	margin-left: auto

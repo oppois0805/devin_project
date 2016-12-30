@@ -1,0 +1,1129 @@
+/* ==========================================================================
+   撰寫dashboard
+   ========================================================================== */
+
+$db_width: 					150px
+$db_height: 				45px
+
+$db_temperature_width_s:    42px
+$db_temperature_height_s: 	24px
+
+$db_temperature_width_l:    58.5px
+$db_temperature_height_l: 	32.8px
+
+$block_default_width: 		174px
+$block_default_height: 		174px
+
+// -------------------------------------
+//   @mixin
+// -------------------------------------
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.dashboard_top
+	width: 100%
+
+.dashboard_content
+	+flex(column, space-between, center)
+ 
+.dashboard_content_top
+	+flex(row, space-between, center)
+	flex-wrap: wrap
+
+.dropdown
+	&:first-child > .db-ddl
+		border-top-left-radius: $b-borderRadius_3
+		border-bottom-left-radius: $b-borderRadius_3
+	&:last-child > .db-ddl
+		border-top-right-radius: $b-borderRadius_3
+		border-bottom-right-radius: $b-borderRadius_3
+
+.dropdown_a
+	+flex(row, center, center)
+	width: $db_width
+	height: $db_height
+	font-size: $font-size_16
+	color: $navyblue
+	background-color: $white_opacity_80
+	&:hover
+		background-color: $white_opacity_30
+
+.dropdown-menu_item
+	+flex(row, space-between, center)
+	flex-wrap: wrap
+
+.button-group
+	float: right
+	> div
+		float: left
+		
+.title
+	margin-left: 10px
+
+.l-wrapper_content_top
+	> div >
+		.nav
+			display: none
+			float: left
+			> li > a
+				display: flex
+				padding: 0
+		.nav-pills > li > a
+			border-radius: 0
+		.nav > .dropdown >
+			a > .caret
+				margin-left: 20px
+			.dropdown-menu
+				min-width: 150px
+				border-radius: 0px 0px 3px 3px
+				background-color: #2a4464
+				> li > a
+					display: flex
+					padding: 6.5px 10px 6.5px 11px
+					&:hover
+						color: #fff
+						background-color: #081a2e
+
+.dashboard_content_bottom
+	margin: 0 auto
+
+.l-wrapper_bottom_content > div > .dashboard_content_bottom > .bx-wrapper
+	margin: 0 auto
+	> .bx-viewport
+		border: none
+
+// -------------------------------------
+//  Dashboard_Block
+// -------------------------------------
+
+.db-block_1x1
+	width: $block_default_width
+	height: $block_default_height
+	background-color: $white_opacity_40
+	> .db-block_title
+		height: 17%
+		width: 85%
+
+.db-block_1x2
+	width: $block_default_width * 2 + 6
+	height: $block_default_height
+	background-color: $white_opacity_40
+	> .db-block_title
+		height: 17%
+		width: 92%
+
+.db-block_1x3
+	width: $block_default_width * 3 + 12
+	height: $block_default_height
+	background-color: $white_opacity_40
+	> .db-block_title
+		height: 17%
+		width: 94%
+
+.db-block_2x1
+	width: $block_default_width
+	height: $block_default_height * 2 + 6
+	background-color: $white_opacity_40
+	> .db-block_title
+		height: 8.5%
+		width: 92%
+	> .db-block_content
+		height: 91.5%
+
+.db-block_2x2
+	width: $block_default_width * 2 + 6
+	height: $block_default_height * 2 + 6
+	background-color: $white_opacity_40
+	> .db-block_title
+		height: 8.5%
+		width: 92%
+	> .db-block_content
+		height: 91.5%
+
+.db-block_title
+	+flex(row, flex-start, center)
+	margin: 0 auto
+	> span 
+		margin-left: 5px
+
+.db-block_content
+	margin: 0 auto
+	height: 83%
+
+// -------------------------------------
+//   Dashboard_Block_environment
+// -------------------------------------
+
+.test
+	> div
+		float: left
+		margin: 3px 3px 3px
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.db-block_title--env
+	&::before
+		content: url('../images/5_dashboard/titlesurrounding.png')
+
+.db-block_title--power
+	&::before
+		content: url('../images/5_dashboard/titlebuilding.png')
+
+.db-block_title--security
+	&::before
+		content: url('../images/5_dashboard/titlesafety.png')
+
+.db-block_title--electricity
+	&::before
+		content: url('../images/5_dashboard/titleelectronic.png')
+
+.db-block_title--air
+	&::before
+		content: url('../images/5_dashboard/titleair.png')
+
+/* ==========================================================================
+   撰寫 環境-氣象
+   ========================================================================== */
+
+$met-data: ("sunny", "rain", "cloudy", "thunder")
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.env_met_1x1
+	@extend %env_met_1x1
+.env_met_1x2
+	@extend %env_met_1x2
+.env_met_1x3
+	@extend %env_met_1x3
+
+/// -------------------------------------
+//   @mixin
+// -------------------------------------
+
+=temperature_block($width, $height,$font-size)
+	width: #{$width}
+	height: #{$height}
+	color: $white
+	border-radius: $b-borderRadius_4dot5
+	background-color: $navyblue
+	font-size: #{$font-size}
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%env_met_1x1
+	height: 100%
+	> div
+		width: 85%
+		padding-top: 5px
+		line-height: 35px
+		> div:nth-child(1)
+			+flex(row, space-between, center)
+			> span
+				&:nth-child(1)
+					width: 70%
+					font-family: sans-serif
+					font-size: $font-size_36
+			> div
+				&:nth-child(2)
+					+flex(row, center, center)
+					width: 30%
+					font-size: $font-size_13
+					> div
+						+flex(row, center, center)
+						+temperature_block($db_temperature_width_s,$db_temperature_height_s,$font-size_13)
+					
+		> div:nth-child(2)
+			+flex(row, flex-start, center)
+			> span
+				font-size: $font-size_12	
+		> div:nth-child(3)
+			> div
+				+flex(row, space-between, flex-end)
+				height: 70px
+				&::after
+					+flex(column, flex-end, center)
+				> div
+					&::before
+						content: url('../images/5_dashboard/fa-map-marker.png')
+
+%env_met_1x2
+	height: 100%
+	> div
+		width: 95%
+		margin: 0 auto 
+		> div:nth-child(1)
+			+flex(row, space-between, center)
+			flex-wrap: wrap
+			font-size: $font-size_12
+			padding-top: 5px
+			line-height: 20px
+			margin: 0 auto
+			width: 85%
+			> div
+				+flex(column, space-between, center)
+				> img
+					height: 22px
+					width: 26px
+		> div:nth-child(2)
+			+flex(column, space-between, center)
+		
+%env_met_1x3
+	height: 100%
+	> div
+		display: flex
+		margin: 0 auto
+		font-size: $font-size_12
+		line-height: 20px
+		> div:nth-child(1)
+			width: 25%
+			line-height: 35px
+			padding-top: 5px
+			> div:nth-child(1)
+				+flex(row, space-between, center)
+				> span
+					&:nth-child(1)
+						font-family: sans-serif
+						font-size: $font-size_36
+			> div:nth-child(2)
+				+flex(row, flex-start, center)
+				padding-left: 7px
+			> div:nth-child(3)
+				> div
+					+flex(row, space-between, flex-end)
+					font-size: 14px
+					height: 71px
+					> div::before
+						content: url('../images/5_dashboard/fa-map-marker.png')
+
+		> div:nth-child(2)
+			width: 57%
+			padding-top: 4px
+			> div 
+				+flex(row, space-between, center)
+				flex-wrap: wrap
+				> div 
+					+flex(column, space-between, center)
+					> img
+						height: 24px
+		> div:nth-child(3)
+			+flex(column, space-around, flex-end)
+			width: 18%
+			&::after
+				+flex(column, flex-end, center)
+				width: 52px
+				height: 70px
+			> div:nth-child(1)
+				+flex(row, center, center)
+				+temperature_block($db_temperature_width_l,$db_temperature_height_l,$font-size_18)
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.env_met_1x1--empty
+	> div
+		margin: 0 auto
+		border-top: 1px $navyblue solid
+.env_met_1x2--empty
+	> div
+		border-top: 1px $navyblue solid
+		> div:nth-child(1)
+			color: $navyblue
+
+//opacity
+@each $Name in $met-data 
+
+	.env_met_1x1--#{$Name}_opacity
+		> div
+			margin: 0 auto
+			border-top: 1px $navyblue solid
+			> div:nth-child(3)
+				> div::after
+					@if $Name == sunny
+						content: url('../images/5_dashboard/environment_met_image/weathersunny-1x1-opacity.png')
+					@if $Name == rain
+						content: url('../images/5_dashboard/environment_met_image/weatherrainy-1x1-opacity.png')
+					@if $Name == cloudy 
+						content: url('../images/5_dashboard/environment_met_image/weathercloudy-1x1-opacity.png')
+					@if $Name == thunder
+						content: url('../images/5_dashboard/environment_met_image/weatherthunder-1x1-opacity.png')
+
+	.env_met_1x2--#{$Name}_opacity
+		> div
+			border-top: 1px $navyblue solid
+			> div:nth-child(1)
+				color: $navyblue
+
+	.env_met_1x3--empty
+		> div
+			width: 95%
+			border-top: 1px $navyblue solid
+			> div:nth-child(3)
+				&::after
+					content: " "
+					width: 52px
+					height: 70px
+
+	.env_met_1x3--#{$Name}_opacity
+		> div
+			width: 95%
+			border-top: 1px $navyblue solid
+			> div:nth-child(3)
+				&::after
+					@if $Name == sunny
+						content: url('../images/5_dashboard/environment_met_image/weathersunny-1x1-opacity.png')
+					@if $Name == rain
+						content: url('../images/5_dashboard/environment_met_image/weatherrainy-1x1-opacity.png')
+					@if $Name == cloudy 
+						content: url('../images/5_dashboard/environment_met_image/weathercloudy-1x1-opacity.png')
+					@if $Name == thunder
+						content: url('../images/5_dashboard/environment_met_image/weatherthunder-1x1-opacity.png')
+
+//color
+@each $Name in $met-data 
+	.env_met_1x1--#{$Name}_color
+		@if $Name == sunny
+			background-image: linear-gradient(128deg, #ccf2fa, #9dd7f2)
+		@if $Name == rain
+			background-image: linear-gradient(128deg, #7f8fb6, #39496f)
+		@if $Name == cloudy
+			background-image: linear-gradient(128deg, #ccf2fa, #9dd7f2)
+		@if $Name == thunder
+			background-image: linear-gradient(128deg, #7f8fb6, #39496f)
+		> div
+			margin: 0 auto
+			> div:nth-child(3)
+				> div::after
+					@if $Name == sunny
+						content: url('../images/5_dashboard/environment_met_image/weathersunny-1x1-color.png')
+					@if $Name == rain
+						content: url('../images/5_dashboard/environment_met_image/weatherrainy-1x1-color.png')
+					@if $Name == cloudy 
+						content: url('../images/5_dashboard/environment_met_image/weathercloudy-1x1-color.png')
+					@if $Name == thunder
+						content: url('../images/5_dashboard/environment_met_image/weatherthunder-1x1-color.png')
+			
+	.env_met_1x2--#{$Name}_color
+		@if $Name == sunny
+			background-image: linear-gradient(128deg, #ccf2fa, #9dd7f2)
+		@if $Name == rain
+			background-image: linear-gradient(128deg, #7f8fb6, #39496f)
+		@if $Name == cloudy
+			background-image: linear-gradient(128deg, #ccf2fa, #9dd7f2)
+		@if $Name == thunder
+			background-image: linear-gradient(128deg, #7f8fb6, #39496f)
+		> div > div:nth-child(1)
+			color: $white
+
+	.env_met_1x3--#{$Name}_color
+		@if $Name == sunny
+			background-image: linear-gradient(130deg, #ccf2fa, #9dd7f2)
+		@if $Name == rain
+			background-image: linear-gradient(111deg, #7f8fb6, #39496f)
+		@if $Name == cloudy
+			background-image: linear-gradient(130deg, #ccf2fa, #9dd7f2)
+		@if $Name == thunder
+			background-image: linear-gradient(111deg, #7f8fb6, #39496f)
+		> div
+			width: 97%
+			> div:nth-child(2)
+				color: #fff
+			> div:nth-child(3)
+				&::after
+					@if $Name == sunny
+						content: url('../images/5_dashboard/environment_met_image/weathersunny-1x1-color.png')
+					@if $Name == rain
+						content: url('../images/5_dashboard/environment_met_image/weatherrainy-1x1-color.png')
+					@if $Name == cloudy 
+						content: url('../images/5_dashboard/environment_met_image/weathercloudy-1x1-color.png')
+					@if $Name == thunder
+						content: url('../images/5_dashboard/environment_met_image/weatherthunder-1x1-color.png')
+		
+
+
+/* ==========================================================================
+   撰寫 環境-室內外
+   ========================================================================== */
+	
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.env_1x1
+	@extend %env
+	width: 85%
+	> div 
+		> div
+			> div 
+				margin: 12px 0 12px 0
+				> div:nth-child(1)
+					+flex(row, space-between, center)
+					flex-wrap: wrap
+					> div:nth-child(1)
+						font-family: STHeitiTC
+						font-size: $font-size_12
+						font-style: normal
+						font-stretch: normal
+						font-weight: bold
+					> div:nth-child(2)
+						font-family: Arial-MT
+						font-size: 	$font-size_13
+						font-style: italic
+						font-stretch: normal
+						font-weight: bold
+				> div:nth-child(2)
+					> div > canvas
+						border-radius: $b-borderRadius_4dot5
+
+.env_1x2
+	@extend %env
+	width: 92%
+	> div 
+		> div
+			width: 100%
+			> div
+				width: 100%
+				margin: 23px 0 23px 0
+				+flex(row, space-between ,center)
+				> div:nth-child(1)
+					font-family: STHeitiTC
+					font-size: $font-size_12
+					font-weight: bold
+					font-style: normal
+					font-stretch: normal
+				> div:nth-child(2)
+					width: 65%
+					+flex(row, space-between ,center)
+					> span
+						width: 9%
+						color: rgba(0,0,0, 0.3)
+						text-align: right
+						font-family: Arial-MT
+						font-size: $font-size_12
+						font-weight: normal
+						font-style: italic
+						font-stretch: normal
+					> div > canvas
+						border-radius: $b-borderRadius_4dot5
+				> div:nth-child(3)
+					+flex(row, space-around ,center)
+					font-family: Arial-MT
+					font-size: $font-size_16
+					font-weight: bold
+					font-style: normal
+					font-stretch: normal
+					width: 19%
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%env
+	height: 100%
+	border-top: 1px $navyblue solid
+	margin: 0 auto
+	> div
+		height: 100%
+		> div
+			height: 100%
+		
+/* ==========================================================================
+   撰寫 PM2.5
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+$pm25-data: (1: "優", 2: "良", 3: "輕度汙染", 4: "中度汙染", 5: "重度汙染", 6: "嚴重汙染")
+
+.env_pm25_1x1
+	@extend %env_pm25_1x1
+
+// -------------------------------------
+//   @Mixin
+// -------------------------------------
+
+@mixin index
+	width: 22px
+	height: 3px
+	&:not(:first-child)
+		margin-top: 3px
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%env_pm25_1x1
+	height: 100%
+	> div
+		display: flex
+		width: 85%
+		margin: 0 auto
+		> div:nth-child(1)
+			+flex(column, space-between, center)
+			height: 100%
+			width: 20%
+			padding: 10px 0 0 5px
+			> span
+				width: 100%
+				text-align: center
+				margin-top: 5px
+		> div:nth-child(2)
+			height: 141px
+			width: 80%
+			> div:nth-child(1)
+				+flex(column, flex-end, center)
+				height: 75%
+			> div:nth-child(2)
+				+flex(row, center, center)
+				height: 25%
+				> span
+					font-family: sans-serif
+					font-style: italic
+					font-size: $font-size_18
+
+%index_opacity--black
+	+index
+	background-color: $black_opacity_10
+	border: solid 1px transparent
+	border-radius: $b-borderRadius_4dot5
+
+%index_active_opacity--black
+	+index
+	background-color: $navyblue
+	border: solid 1px $navyblue
+	border-radius: $b-borderRadius_4dot5
+
+%index_color--white
+	+index
+	background-color: $white_opacity_30
+	border: solid 1px transparent
+	border-radius: $b-borderRadius_4dot5
+
+%index_active_color--white
+	+index
+	background-color: $white
+	border: solid 1px $white
+	border-radius: $b-borderRadius_4dot5
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+.env_pm25_1x1_empty
+	> div
+		border-top: 1px $navyblue solid
+
+@for $i from 1 through 6
+	.env_pm25_1x1--lv#{$i}_opacity
+		> div
+			border-top: 1px $navyblue solid
+			> div:nth-child(1)
+				> span
+					color: $navyblue
+				> span::after
+					content: map-get($pm25-data, $i)
+				> div	
+					@extend %index_opacity--black
+
+				@for $i from 1 through $i
+					$child: 7 - $i
+					> div:nth-child(#{$child})
+						@extend %index_active_opacity--black
+
+			> div:nth-child(2)
+				> div:nth-child(1)::after
+					content: url('../images/5_dashboard/environment_pm25_black/airpolluteicon-#{$i}.png')
+				> div:nth-child(2)
+					> span
+						color: $navyblue
+
+@for $i from 1 through 6
+	.env_pm25_1x1--lv#{$i}_black
+		background-color: $navyblue
+		> div
+			> div:nth-child(1)
+				> span
+					color: $white
+				> span::after
+					content: map-get($pm25-data, $i)
+				> div
+					@extend %index_color--white
+
+				@for $i from 1 through $i
+					$child: 7 - $i
+					> div:nth-child(#{$child})
+						@extend %index_active_color--white
+
+			> div:nth-child(2)
+				> div:nth-child(1)::after
+					content: url('../images/5_dashboard/environment_pm25_white/airpolluteicon-#{$i}.png')
+				> div:nth-child(2)
+					> span
+						color: $white
+
+@for $i from 1 through 6
+	.env_pm25_1x1--lv#{$i}_color
+		@if $i == 1
+			background-image: radial-gradient(circle at 50% 50%, #97efa1, #6ae578)
+		@if $i == 2
+			background-image: radial-gradient(circle at 60% 63%, #f4e698, #f0db65)
+		@if $i == 3
+			background-image: radial-gradient(circle at 60% 63%, #f3c995, #eaae64)
+		@if $i == 4
+			background-image: radial-gradient(circle at 60% 63%, #de8ea6, #d96588)
+		@if $i == 5
+			background-image: radial-gradient(circle at 59% 62%, #da8fe1, #c164d5)
+		@if $i == 6
+			background-image: radial-gradient(circle at 59% 58%, #952e58, #711c3f)
+		> div
+			> div:nth-child(1)
+				> span
+					color: $white
+				> span::after
+					content: map-get($pm25-data, $i)
+				> div
+					@extend %index_color--white
+
+				@for $i from 1 through $i
+					$child: 7 - $i
+					> div:nth-child(#{$child})
+						@extend %index_active_color--white
+
+			> div:nth-child(2)
+				> div:nth-child(1)::after
+					content: url('../images/5_dashboard/environment_pm25_white/airpolluteicon-#{$i}.png')
+				> div:nth-child(2)
+					> span
+						color: $white
+
+/* ==========================================================================
+   撰寫 能源指標
+   ========================================================================== */
+
+$round_width: 29px
+$round_height: 29px
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.power_1x1
+	@extend %power
+	width: 85%
+	height: 100%
+	+flex(column, space-around, center)
+	> div
+		+flex(row, space-between, center)
+		> div:nth-child(2)
+			width: 81px
+			font-size: $font-size_12
+			color: $black_opacity_30
+		> div:nth-child(3)
+			width: 30px
+			text-align: center
+			font-size: $font-size_18
+			font-family: sans-serif
+			font-weight: bold
+			font-style: italic
+	> div:nth-child(3)
+		> div:nth-child(2)
+			width: 58px
+		> div:nth-child(3)
+			width: 52px
+
+.power_1x2
+	@extend %power
+	width: 95%
+	+flex(row, space-between, center)
+	padding-top: 12px
+	> div
+		position: relative
+		width: 33.333%
+		margin: 0 auto
+		> div:nth-child(2)
+			font-weight: bold
+			font-style: italic
+			font-stretch: normal
+			> div:nth-child(1)
+				padding: 6px 0 0 7px
+			> div:nth-child(2)
+				margin: -53px 0 0 37px
+
+	> div:not(:last-child)
+		> div:nth-child(2)
+			height: 106px
+			width: 102px
+			background-image: url('../images/5_dashboard/bg-degree_0-999.png')
+		
+	> div:last-child
+		> div:nth-child(2)
+			height: 106px
+			width: 102px
+			background-image: url('../images/5_dashboard/bg-degree_-100-100.png')
+
+.eui-round
+	@extend %round
+	background-color: #62b3fc
+	border: $b-borderRadius_3 solid #B5D9F4
+
+.dui-round
+	@extend %round
+	background-color: #7cdeea
+	border: $b-borderRadius_3 solid #C5F5F8
+
+.saving-round
+	@extend %round
+	background-color: #a6ffb2
+	border: $b-borderRadius_3 solid #CAFFDC
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%round
+	+flex(row, center, center)
+	height: $round_height
+	width: $round_width
+	border-radius: 99em
+	font-family: sans-serif
+	font-size: $font-size_12
+	font-weight: bold
+
+%power
+	border-top: 1px solid $navyblue
+	margin: 0 auto
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.eui-round--exceed,.dui-round--exceed,.saving-round--exceed
+	border: $b-borderRadius_3 solid $red
+	box-shadow: 0 0 3px 0 $red
+
+
+/* ==========================================================================
+   撰寫 安防
+   ========================================================================== */
+
+$security-data: (1: "無人", 2: "人少", 3: "正常", 4: "人多", 5: "擁擠")
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.security_nop_1x1
+	@extend %security
+	width: 88%
+	> div
+		height: 90%
+		width: 85%
+		position: relative
+		> div:nth-child(1)
+			line-height: 38px
+			> div:nth-child(1)
+				text-align: center
+			> div:nth-child(2)
+				text-align: center
+				> strong
+					font-size: $font-size_18
+			> div:nth-child(3)
+				text-align: center
+				> div:nth-child(1)
+					+flex(row, space-between, center)
+					color: $black_opacity_30
+				> div:nth-child(2)
+					+flex(row, center, center)
+					width: 100%
+					position: relative
+					background-color: $white_opacity_30
+					border-radius: 99em
+					> div
+						+flex(row,space-between,center)
+						height: 12px
+						width: 95%
+						> span
+							width: 8px
+							height: 8px
+							opacity: 0.3
+							background-color: #2a4464
+							border-radius: 99em	
+		> div:nth-child(2)
+			+flex(row, flex-start, center)	
+			position: absolute
+			width: 100%
+			margin-top: -13px
+			> div
+				height: 13px
+				background-color: rgba(64, 158, 243,0.3)
+				border-radius: 99em
+				transition-property: width
+				transition-duration: 2s
+
+.security_mon_1x1
+	@extend %security
+	width: 95%
+	> div
+		height: 90%
+		+flex(column, space-around, flex-start)
+		> div:nth-child(1)
+			+flex(column, center, center)
+			height: 80%
+		> div:nth-child(2)
+			+flex(column, center, center)
+			height: 20%
+
+.security_mon_2x2
+	@extend %security
+	width: 95%
+	> div
+		height: 100%
+		+flex(column, space-around, flex-start)
+		> div:nth-child(1)
+			+flex(column, center, center)
+			height: 77%
+		> div:nth-child(2)
+			+flex(column, center, center)
+			font-size: $font-size_18
+			height: 23%
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%security
+	height: 100%
+	border-top: 1px solid $navyblue
+	margin: 0 auto
+	+flex(column, space-around, center)
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+@each $number, $i in $security-data
+	$width: (27 * $number)
+	@if $number == 1
+		$width: 16
+	@else
+		$width: $width
+	.security_nop_1x1--lv#{$number}
+		> div
+			> div:nth-child(1)
+				> div:nth-child(2)
+					> strong::after
+						content: "#{$i}"
+			> div:nth-child(2)
+				> div
+					width: #{$width}px
+
+
+/* ==========================================================================
+   撰寫 電量
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.electricity_1x1
+	@extend %electricity_circle
+	width: 85%
+	> div
+		+background_setting('images/5_dashboard/electricity/','electricity_1x1.png', 132 , 133)
+		background-size: 132px 133px
+		> div:nth-child(1)
+			position: absolute
+			margin: 4px 0 0 6px
+		> div:nth-child(2)
+			margin: 44px
+			height: 11%
+			> strong:nth-child(1),strong:nth-child(3)
+				font-size: $font-size_12
+			> strong:nth-child(2)
+				font-size: $font-size_25
+
+.electricity_1x2
+	width: 95%
+	margin: 0 auto
+	border-top: 1px solid $navyblue
+
+	> div:nth-child(1)
+		width: 350px
+		height: 130px
+		> div:nth-child(1) 
+			width: 350px
+			height: 170px
+			margin: -20px 0 0 -6px
+		> div:nth-child(2)
+			width: 83%
+			height: 1px
+			margin: -57px 0 0 23px
+			background-color: rgba(0,0,0,.15)
+	
+	> div:nth-child(2)
+		height: 20%
+		width: 85%
+		margin: 0 auto
+		+flex(row, space-between, center)
+		> div 
+			+flex(row, space-between,center)
+			width: 65%
+			> strong:nth-child(1)
+				font-size: 12px
+				margin-left: 5px
+				&::before
+					content: url('../images/5_dashboard/signal.png')
+					padding-right: 5px
+			> strong:nth-child(2)
+				font-family: Arial-MT
+				font-size: 20px
+				font-weight: bold
+				font-style: italic
+				font-stretch: normal
+			> strong:nth-child(3)
+				font-family: Arial-MT
+				font-size: 12px
+				font-weight: bold
+				font-style: italic
+				font-stretch: normal
+
+.electricity_2x2
+	@extend %electricity_circle
+	width: 92%
+	> div
+		+background_setting('images/5_dashboard/electricity/','electricity_1x1.png', 300 , 300)
+		background-size: 300px 300px
+		> div:nth-child(1)
+			position: absolute
+			margin: 12px auto 0 12px
+		> div:nth-child(2)
+			height: 30%
+			margin-top: 103px
+			> strong:nth-child(1),strong:nth-child(3)
+				font-size: $font-size_14
+			> strong:nth-child(2)
+				font-size: $font-size_36
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%electricity_circle
+	height: 100%
+	border-top: 1px solid $navyblue
+	margin: 0 auto
+	+flex(row, center, center)
+	> div
+		> div:nth-child(2)
+			+flex(column, space-between, center)
+			> strong:not(:nth-child(1))
+				font-family: Arial-MT
+				font-weight: bold
+				font-style: italic
+				font-stretch: normal
+
+
+/* ==========================================================================
+   撰寫 空調
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.air_1x1
+	@extend %air
+	width: 85%
+	
+.air_1x2
+	@extend %air
+	+flex(row, space-around,center)
+	width: 95%
+	height: 100%
+	> div
+		+flex(row, space-around,center)
+		height: 85%
+		width: 95%
+		> div
+			+flex(column, space-between,center)
+			height: 100%
+			&:nth-child(2n)
+				width: 1px
+				height: 54%
+				border-right: 1px dotted $black_opacity_30
+			> div:nth-child(2)
+				height: 100%
+				+flex(row, center, center)
+				> div
+					transform: rotate(270deg)
+					> canvas
+						border-radius: 99em
+			> span:nth-child(1)
+				font-size: $font-size_12
+				color: #88909a
+			> span:nth-child(3)
+				font-size: $font-size_14
+		
+
+.air_2x1
+	@extend %air
+	width: 95%
+	height: 100%
+	> div
+		height: 100%
+		+flex(column, space-around, '')
+		> div
+			height: 20%
+			+flex(row, space-between, center)
+			> div
+				height: 20%
+				&:nth-child(1)
+					height: 100%
+					text-align: center
+					width: 40%
+					max-width: 40%
+					font-size: 12px
+				&:nth-child(2)
+					text-align: center
+					width: 30%
+					max-width: 30%
+					font-size: 18px
+					font-family: Arial-MT
+					font-weight: bold
+					font-style: italic
+					font-stretch: normal
+				&:nth-child(3)
+					display: flex
+					justify-content: center
+					border-radius: 99em
+					transform: rotate(270deg)
+					> div > canvas
+						border-radius: 99em
+			&:nth-child(2n+1)
+				padding-top: 4px
+			&:nth-child(2n)
+				width: 90%
+				height: 1%
+				margin: 0 auto
+				border-bottom: 1px dotted $black_opacity_30
+
+				
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%air
+	margin: 0 auto
+	border-top: 1px solid $navyblue

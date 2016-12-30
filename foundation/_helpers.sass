@@ -1,0 +1,75 @@
+/* ==========================================================================
+   撰寫@Mixin、extend、animations:
+   ========================================================================== */
+
+// -------------------------------------
+//   @Mixin
+// -------------------------------------
+
+// --------------------------------------------------
+// flexbox排版方式
+// $file_name 檔案名稱
+// --------------------------------------------------
+
+=flex($fd, $jc, $ai)
+	display: flex
+	flex-direction: $fd
+	justify-content: $jc
+	align-items: $ai
+
+// --------------------------------------------------
+// 設定圖片大小與圖片連結
+// $file_name 檔案名稱
+// --------------------------------------------------
+=background_setting($imageurl, $file_name, $height, $width)
+	background-image: url('../#{$imageurl}#{$file_name}')
+	background-repeat: no-repeat
+	background-position: center
+
+	@if $height == 'auto' and $width == 'auto'
+		height: image-height('#{$imageurl}#{$file_name}')
+		width: image-width('#{$imageurl}#{$file_name}')
+	@else
+		height: #{$height}px
+		width: #{$width}px
+
+// --------------------------------------------------
+// 選單圖片mixin
+// $file_name 檔案名稱
+// $file_extension 檔案副檔名
+// reference function:
+// 		=background_setting($file_name)
+// --------------------------------------------------
+=background_image($imageurl, $transform, $file_n, $file_h, $file_a, $file_f, $file_extension,$height,$width)
+	cursor: pointer	
+	+background_setting(#{$imageurl}, '#{$file_n}.#{$file_extension}', #{$height}, #{$width})
+	@if $file_h != ''
+		&:hover
+			+background_setting(#{$imageurl}, '#{$file_h}.#{$file_extension}', #{$height}, #{$width})
+	@if $file_a != ''
+		&:active
+			+background_setting(#{$imageurl}, '#{$file_a}.#{$file_extension}', #{$height}, #{$width})
+	@if $file_f != ''
+		&.active
+			+background_setting(#{$imageurl}, '#{$file_f}.#{$file_extension}', #{$height}, #{$width})
+	// @if $transform == 'true'
+	// 	&:active
+	// 		+transform(translateX(1px) translateY(1px))
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+// ----- Fade In ----- //
+@keyframes fadein
+	from 
+		opacity: 0
+	to 
+		opacity: 1
+
+// ----- Fade Out ----- //
+@keyframes fadeout
+	from 
+		opacity: 1
+	to 
+		opacity: 0

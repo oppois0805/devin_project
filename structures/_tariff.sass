@@ -1,0 +1,34 @@
+/* ==========================================================================
+   撰寫tariff
+   ========================================================================== */
+
+$tariff-width: 700px
+$tariff-height: 300px
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.tariff
+	width: 100%
+	height: 100%
+	+flex(row, center, center)
+
+.tariff_content
+	background-color: $white_opacity_30
+	width: $tariff-width
+	height: $tariff-height
+	+flex(column, center, center)
+
+.tariff_content_item
+	width: 100%
+	margin: 15px 0 15px 0
+	+flex(row, center, center)
+	&:nth-child(2)
+		> div:nth-child(1)
+			margin-left: 80px
+
+.tariff_content_item_unit
+	height: 90px
+	margin-left: 10px
+	+flex(row, flex-end, center)

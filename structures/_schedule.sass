@@ -1,0 +1,263 @@
+/* ==========================================================================
+   撰寫schedule
+   ========================================================================== */
+
+$radius : 				99em
+
+$round_width: 			12px
+$round_height: 			12px
+
+$chartblock_wdith: 		885px
+$chartblock_height: 	280px
+
+$pointer_width: 		9px
+$pointer_height: 		9px
+
+$setblock_width: 		83.9%
+$setblock_height: 		150px
+
+// -------------------------------------
+//   @mixin
+// -------------------------------------
+
+=round($width, $height)
+	width: $width
+	height: $height
+	border-radius: $radius
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+//狀態按鈕
+.bt
+	+flex(row, center, center)
+	width: 114px
+	height: 32px
+	background-color: $white_opacity_40
+	cursor: pointer
+	font-size: 16px
+	&:first-child
+		border-top-left-radius: $b-borderRadius_3
+		border-bottom-left-radius: $b-borderRadius_3
+	&:last-child
+		border-top-right-radius: $b-borderRadius_3
+		border-bottom-right-radius: $b-borderRadius_3
+	&:not(:first-child)
+		margin-left: 2px
+	&:hover
+		background-color: $white_opacity_80
+
+.schedule_top
+	+flex(row, space-between, flex-end)
+	height: 35px
+	width: 20%
+	margin-left: 120px
+
+.schedule_top_someonetag
+	+flex(row, flex-start, center)
+	display: none
+
+.schedule_top_unmannedtag
+	+flex(row, flex-start, center)
+	display: none
+
+.schedule_top_someonetag_img
+	+round(12px, 12px)
+	margin: 0 12px 0 15px
+	vertical-align: middle
+	cursor: pointer
+	background-color: #fff056
+
+.schedule_top_unmannedtag_img
+	+round(12px, 12px)
+	margin: 0 12px 0 15px
+	vertical-align: middle
+	cursor: pointer
+	background-color: rgb(212, 191, 71)
+
+.schedule_chartblock
+	width: $chartblock_wdith
+	height: $chartblock_height
+	display: block
+	position: relative
+	border-left: 3px solid $navyblue
+	border-bottom: 3px solid $navyblue
+	margin: 10px auto
+
+.schedule_brightness
+	position: absolute
+	margin: -15px 0 0 80px
+
+.schedule_hundred_percent
+	position: absolute
+	margin: 21px 0 0 45px
+
+.schedule_hundred_percent_pointer
+	width: 9px
+	height: 9px
+	border-radius: 99em
+	position: absolute
+	background-color: #081a2e
+	margin: 23px 0 0 91px
+
+.schedule_Zero_percent
+	position: absolute
+	margin: 285px 0 0 60px
+
+.schedule_time
+	position: absolute
+	margin: 285px 0 0 1000px
+
+.schedule_eyes
+	position: absolute
+	margin: 248px 0 0 1000px
+	width: 30px
+	height: 30px
+	cursor: pointer
+	background-image: url("../images/3_schedule/btn_schedule_hide_n.png")
+	&:hover
+		background-image: url("../images/3_schedule/btn_schedule_hide_h.png")
+	&.active
+		background-image: url("../images/3_schedule/btn_schedule_show_n.png")
+		&:hover
+			background-image: url("../images/3_schedule/btn_schedule_show_h.png")
+
+.schedule_setblock
+	height: $setblock_height
+	width: $setblock_width
+	background-color: rgba(255, 255, 255, 0.4)
+	margin: 57px auto 25px auto
+	padding: 20px 0 0 25px
+	box-sizing: border-box
+
+.schedule_setblock_top	
+	display: flex
+
+.schedule_setblock_bottom
+	+flex(row, space-around, center)
+	height: 50%
+	margin-top: 15px
+	padding: 12px 0 12px 0
+	text-align: center
+
+.schedule_setblock_barblock
+	+flex(row, space-around, center)
+
+.schedule_setblock_barblock_left, 
+.schedule_setblock_barblock_right
+	+flex(row, flex-start, center)
+	height: 100%
+	width: 50%
+
+.schedule_setblock_barblock_left_image,
+.schedule_setblock_barblock_right_image
+	+flex(row, space-around, center)
+	margin-top: 25px
+	width: 25%
+
+.schedule_setblock_barblock_left_bar,
+.schedule_setblock_barblock_right_bar
+	+flex(column, space-around, center)
+	height: 100%
+	width: 100%
+
+.schedule_button
+	display: flex
+
+.schedule_button_right
+	+flex(row, space-between, center)
+
+// ----- lightbox ----- //
+
+.DialogContent_row
+	padding: 15px 10px 15px 10px
+	+flex(row, flex-start, center)
+
+.DialogContent_row_title
+	+flex(row, space-between, center)
+	width: 45%
+	padding-left: 15px
+	font-size: $font-size_14
+
+.DialogContent_row_title_error
+	font-size: 12px
+	color: $red_opacity_80
+	margin-right: 5px
+
+.DialogContent_row_time
+	+flex(row, flex-end, center)
+
+.DialogContent_row_content
+	width: 55%
+
+.modal-footer
+	border-top: 0px !important
+
+.modal-title_main_title
+	font-size: $font-size_18
+	margin-left: 8px
+
+.modal-title_sub_title
+	font-size: $font-size_14
+	color: rgba(0, 0, 0, 0.3)
+	padding-top: 5px
+	margin-left: 20px
+
+.DialogContent_hr
+	width: 95%
+	border: 0
+	height: 1px
+	background-color: rgba(0, 0, 0, .1)
+
+//休假日設定
+.DialogContent_row_Holiday_title
+	+flex(row, space-around, center)
+	width: 25%
+	padding-left: 15px
+	font-size: $font-size_14
+
+.DialogContent_row_Holiday_content
+	+flex(row, space-around, center)
+	width: 75%
+
+.ui-datepicker select
+	height: 26px
+
+input[name="chk_group"]
+	width: 20px
+	height: 20px
+	vertical-align: middle
+
+// ----- lightbox ----- //
+
+//--------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.bt--peak
+	&.active,
+	&:active
+		box-shadow: rgba(0, 0, 255, 0.8) -1px -1px 10px, rgba(0, 128, 0, 0.2) 0 0 0px 0px inset
+		color: #fff
+		background-color: rgb(240, 104, 70)
+
+.bt--rest
+	&.active,
+	&:active
+		box-shadow: rgba(0, 0, 255, 0.8) -1px -1px 10px, rgba(0, 128, 0, 0.2) 0 0 0px 0px inset
+		color: #fff
+		background-color: rgb(166, 72, 49)
+
+.bt--Off-peak
+	&.active,
+	&:active
+		box-shadow: rgba(0, 0, 255, 0.8) -1px -1px 10px, rgba(0, 128, 0, 0.2) 0 0 0px 0px inset
+		color: #fff
+		background-color: rgb(77, 33, 22)
+
+.modal-dialog--addtime
+	margin: 17em auto !important
+
+.modal-dialog--holiday
+	margin: 14em auto !important

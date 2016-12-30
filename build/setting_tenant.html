@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>setting_tenant</title>
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo">
+                <div class="l-menu_logo_image">
+                    <img src="../images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title">
+                    <span class="l-title" ">
+                        系统管理员
+                    </span>
+                    <span class="l-title ""> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="../images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <div class="l-menu_nav">
+                <div class="l-menu_nav_light"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power active"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="dropdown">
+                        <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                        <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="nb nb-l">
+                        <ul class="nb_ul">
+                            <li class="nb_li  nb_li--active"><span class="nb_span">承租</span></li>
+                            </li>
+                        </ul>
+                        <div class="nb_border">
+                            <div id="Tab_border" class="nb_line"></div>
+                        </div>
+                        <div class="nb_hr"></div>
+                        <div class="nb_content">
+                            <div name="tenant_step1_content" class="information is-show">
+                                <div class="lease">
+                                    <div class="lease_top">
+                                        <img class="lease_top_images" src="images/4_setting/img_process1_now.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process2_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process3_area planning_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process4_confirm_pass.png">
+                                    </div>
+                                    <div class="lease_content">
+                                        <div class="lease_content_input">
+                                            <div class="lease_content_input_left">
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        公司名称
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        负责人员
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        电子信箱
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        联络电话
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        营业执行注册号
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--m">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        底图上传
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input-file  input--l">
+                                                    </div>
+                                                    <div class="button-setting-file">
+                                                        <input type="file" class="upload">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lease_content_input_right">
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        设定帐号
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        设定密码
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        确定密码
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lease_bottom">
+                                        <div class="button-setting-cancel  mla"></div>
+                                        <div name="tenant_step2" class="button-setting-next  button--gutter_left"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div name="tenant_step2_content" class="information is-hide">
+                                <div class="lease">
+                                    <div class="lease_top">
+                                        <img class="lease_top_images" src="images/4_setting/img_process1_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process2_now.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process3_area planning_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process4_confirm_pass.png">
+                                    </div>
+                                    <div class="lease_content">
+                                        <div class="lease_content_top">
+                                            <div class="unit_group">
+                                                <select class="selectpicker  select  select--l">
+                                                    <option class="option">總部大樓</option>
+                                                    <option class="option">...</option>
+                                                </select>
+                                                <select class="selectpicker  select  select--l   select--gutter_left">
+                                                    <option class="option">23樓</option>
+                                                    <option class="option">24樓</option>
+                                                    <option class="option">...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="lease_content_bottom">
+                                            <svg class="LocalBlock" style="width: 330px; height: 330px; margin-left: auto; margin-right: auto; display: block;" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="block block1 lock" stroke="#ffffff" d="M0,0L165,0L165,82.5L82.5,82.5L82.5,165L0,165Z" stroke-width="1" id="6" fill="#777777" opacity="1" cursor=""></path>
+                                                <text class="block1" x="80" y="50" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,0,0)">1</text>
+                                                <path class="block block2 lock" stroke="#ffffff" d="M165,0L330,0L330,165L247.5,165L247.5,82.5L165,82.5Z" stroke-width="1" id="7" fill="#777777" opacity="1" cursor=""></path>
+                                                <text class="block2" x="70" y="50" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,170,0)">2</text>
+                                                <path class="block block3 lock" stroke="#ffffff" d="M0,165L82.5,165L82.5,247.5L165,247.5L165,330L0,330Z" stroke-width="1" id="8" fill="#777777" opacity="1" cursor=""></path>
+                                                <text class="block3" x="80" y="110" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,0,175)">3</text>
+                                                <path class="block block4 lock" stroke="#ffffff" d="M247.5,165L330,165L330,330L165,330L165,247.5L247.5,247.5Z" stroke-width="1" id="9" fill="#777777" opacity="1" cursor=""></path>
+                                                <text class="block4" x="70" y="110" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,170,175)">4</text>
+                                                <path class="block block5" stroke="#ffffff" d="M82.5,82.5L247.5,82.5L247.5,247.5L82.5,247.5Z" stroke-width="1" id="10" fill="#000000" opacity="0" cursor="pointer" is-public="true"></path>
+                                                <text class="block5 plan_info" x="165" y="165" text-anchor="middle" alignment-baseline="central" stroke="none" fill="#000000" stroke-scale="true" stroke-width="0" opacity="1" style="font-family: '微軟正黑體'; font-size: 20px;">總部大樓23樓</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="lease_bottom ">
+                                        <div class="button-setting-cancel mla"></div>
+                                        <div name="tenant_step1" class="button-setting-prev button--gutter_left "></div>
+                                        <div name="tenant_step3" class="button-setting-next button--gutter_left "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div name="tenant_step3_content" class="information is-hide">
+                                <div class="lease">
+                                    <div class="lease_top">
+                                        <img class="lease_top_images" src="images/4_setting/img_process1_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process2_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process3_area planning_now.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process4_confirm_pass.png">
+                                    </div>
+                                    <div class="lease_content">
+                                        <div class="lease_content_top">
+                                            <div class="unit_group">
+                                                <select class="selectpicker  select  select--l">
+                                                    <option class="option">總部大樓</option>
+                                                    <option class="option">...</option>
+                                                </select>
+                                                <select class="selectpicker  select  select--l   select--gutter_left">
+                                                    <option class="option">23樓</option>
+                                                    <option class="option">24樓</option>
+                                                    <option class="option">...</option>
+                                                </select>
+                                                <div class="button-setting-add  button--gutter_left"></div>
+                                                <div class="button-setting-merge  button--gutter_left"></div>
+                                            </div>
+                                        </div>
+                                        <div class="lease_content_bottom">
+                                            <img src="images/img_fake plane.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="lease_bottom ">
+                                        <div class="button-setting-cancel mla"></div>
+                                        <div name="tenant_step2" class="button-setting-prev button--gutter_left "></div>
+                                        <div name="tenant_step4" class="button-setting-next button--gutter_left "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div name="tenant_step4_content" class="information is-hide">
+                                <div class="lease">
+                                    <div class="lease_top">
+                                        <img class="lease_top_images" src="images/4_setting/img_process1_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process2_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process3_area planning_pass.png">
+                                        <img class="lease_top_images" src="images/4_setting/img_process4_confirm_now.png">
+                                    </div>
+                                    <div class="lease_content">
+                                        <div class="lease_content_input">
+                                            <div class="lease_content_input_left">
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        公司名称
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        负责人员
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        电子信箱
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        联络电话
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        营业执行注册号
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--m  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lease_content_input_right">
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        承租大楼
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        承租楼層
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        承租区域
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable  input-file" disabled="disabled">
+                                                    </div>
+                                                    <div class="button-setting-plan_image">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group_title">
+                                                        承租日期
+                                                    </div>
+                                                    <div class="input-group_content">
+                                                        <input type="text" class="input  input--l  input--disable" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lease_bottom">
+                                        <div class="button-report"></div>
+                                        <div class="button-setting-cancel  mla"></div>
+                                        <div name="tenant_step3" class="button-setting-prev  button--gutter_left"></div>
+                                        <div class="button-confirm  button--gutter_left"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--網頁內容Tab End-->
+    </div>
+    </aside>
+    <!--網頁內容 End-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+     <script>
+        $("#tenant").click(function(event) {
+            $("div[name=tenant_step1_content]").removeClass('is-hide').addClass('is-show');
+            $("div[name=tenant_step2_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step3_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step4_content]").removeClass('is-show').addClass('is-hide');
+        });
+
+        $("#withdrawal").click(function(event) {
+            $("div[name=tenant_step1_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step2_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step3_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step4_content]").removeClass('is-show').addClass('is-hide');
+        });
+
+
+        //tenant
+        $("div[name=tenant_step1]").click((function(event) {
+            $("div[name=tenant_step1_content]").removeClass('is-hide').addClass('is-show');
+            $("div[name=tenant_step2_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step3_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step4_content]").removeClass('is-show').addClass('is-hide');
+        }));
+
+        $("div[name=tenant_step2]").click((function(event) {
+            $("div[name=tenant_step1_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step2_content]").removeClass('is-hide').addClass('is-show');
+            $("div[name=tenant_step3_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step4_content]").removeClass('is-show').addClass('is-hide');
+        }));
+
+        $("div[name=tenant_step3]").click((function(event) {
+            $("div[name=tenant_step1_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step2_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step3_content]").removeClass('is-hide').addClass('is-show');
+            $("div[name=tenant_step4_content]").removeClass('is-show').addClass('is-hide');
+        }));
+
+        $("div[name=tenant_step4]").click((function(event) {
+            $("div[name=tenant_step1_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step2_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step3_content]").removeClass('is-show').addClass('is-hide');
+            $("div[name=tenant_step4_content]").removeClass('is-hide').addClass('is-show');
+        }));
+
+        //withdrawal
+        $("div[name=withdrawal_step1]").click((function(event) {
+            $("#tenant_content").removeClass('is-show').addClass('is-hide');
+        }));
+
+        $("div[name=withdrawal_step2]").click((function(event) {
+            $("#tenant_content").removeClass('is-show').addClass('is-hide');
+        }));
+
+        $("div[name=withdrawal_step3]").click((function(event) {
+            $("#tenant_content").removeClass('is-show').addClass('is-hide');
+        }));
+        </script>
+</body>
+
+</html>

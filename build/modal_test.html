@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <div class="modal fade in" id="myModal" role="dialog" style="display: block;">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">
+                        <span>新增標題</span>
+                    </h4>
+                    <hr>
+                </div>
+                <div class="modal-body">
+                    <style type="text/css">
+                    .add {
+                        width: 45px;
+                        height: 45px;
+                        margin-left: 15px
+                    }
+                    
+                    .delete {
+                        margin-right: 10px;
+                        float: right;
+                    }
+                    
+                    .chart_setting_top {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    
+                    .setting {
+                        width: 100%;
+                        margin: 10px 0 10px 0;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    
+                    .setting_c {
+                        display: flex;
+                        width: 80%;
+                    }
+                    
+                    .setting_c_l {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20%;
+                        background-color: rgba(0, 0, 0, .3);
+                        border: 1px solid #999;
+                        margin-bottom: -1px;
+                    }
+                    
+                    .setting_c_r {
+                        width: 80%;
+                    }
+                    
+                    .setting_c_r_c {
+                        width: 100%;
+                        height: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #999;
+                        box-sizing: border-box;
+                        margin-bottom: -1px;
+                    }
+                    
+                    .setting_c_r_c_l {
+                        width: 80%;
+                        text-align: center;
+                    }
+                    
+                    .setting_c_r_c_r {
+                        width: 20%;
+                    }
+                    </style>
+                    <div class="chart_setting_top">
+                        <select id="drive_id" class="selectpicker  select  select--l select-modal">
+                            <option class="option" value="0">HA-01</option>
+                            <option class="option" value="1">HA-02</option>
+                            <option class="option" value="2">HA-03</option>
+                        </select>
+                        <select id="drive_value" class="selectpicker  select  select--l  select-modal select--gutter_left">
+                            <option class="option" value="0">R相電壓</option>
+                            <option class="option" value="1">S相電壓</option>
+                            <option class="option" value="2">T相電壓</option>
+                            <option class="option" value="3">累積用電量</option>
+                        </select>
+                        <button class="add" id="add">＋</button>
+                    </div>
+                    <div class="chart_setting_bottom">
+                        <div id="0" class="setting">
+                            <div class="setting_c">
+                                <div class="setting_c_l">
+                                    H1-01
+                                </div>
+                                <div class="setting_c_r">
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>R相電壓</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>R相電壓</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>R相電壓</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="1" class="setting">
+                            <div class="setting_c">
+                                <div class="setting_c_l">
+                                    H1-02
+                                </div>
+                                <div class="setting_c_r">
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>R相電壓</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>R相電壓</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>R相電壓</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <hr>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+    <script>
+    $('body').on('click', '.delete', function() {
+        if ($(this).parent().parent().parent().find("div").length - 3 === 0) {
+            $(this).parent().parent().parent().parent().parent().remove();
+        } else {
+            $(this).parent().parent().remove();
+        }
+    });
+
+    $("#add").click(function(event) {
+        const drive = $("#drive_id option:selected");
+        const field = $("#drive_value option:selected");
+
+        var el = $("#" + drive.val());
+
+        if (el.length) {
+            el.find('.setting_c_r').append(`<div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>` + field.text() + `</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>`);
+        } else {
+            $('.chart_setting_bottom').append(` 
+	    			<div id="` + drive.val() + `" class="setting">
+                            <div class="setting_c">
+                                <div class="setting_c_l">
+                                    ` + drive.text() + `
+                                </div>
+                                <div class="setting_c_r">
+                                    <div class="setting_c_r_c">
+                                        <div class="setting_c_r_c_l">
+                                            <span>` + field.text() + `</span>
+                                        </div>
+                                        <div class="setting_c_r_c_r">
+                                            <button class="delete">X</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+	    			`);
+        }
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>setting_tenant_index</title>
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo">
+                <div class="l-menu_logo_image">
+                    <img src="../images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title">
+                    <span class="l-title" ">
+                        系统管理员
+                    </span>
+                    <span class="l-title ""> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="../images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <div class="l-menu_nav">
+                <div class="l-menu_nav_light"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power active"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="dropdown">
+                        <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                        <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                    <select class="selectpicker  select  select--m">
+                        <option class="option">-- 搜尋類別 --</option>
+                        <option class="option">公司名稱</option>
+                        <option class="option">負責人員</option>
+                        <option class="option">...</option>
+                    </select>
+                    <input type="text" class="input  input-search  input--m">
+                    <div class="button-search"></div>
+                    <div class="button-tenant_print  mla">
+                    </div>
+                    <div class="button-tenant_add  button--gutter_left">
+                    </div>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="grid-2">
+                                        公司名称
+                                    </th>
+                                    <th class="grid-1">
+                                        负责人员
+                                    </th>
+                                    <th class="grid-4">
+                                        电子信箱
+                                    </th>
+                                    <th class="grid-1">
+                                        联络电话
+                                    </th>
+                                    <th class="grid-1">
+                                        承租日期
+                                    </th>
+                                    <th class="grid-1">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>國生</td>
+                                    <td>楊瑋玲</td>
+                                    <td><a href="#">xeddeffexu-1234@yopmail.com</a></td>
+                                    <td>3421343324</td>
+                                    <td>2016/05/03</td>
+                                    <td>
+                                        <div class="setting_edit">
+                                            <div class="button-plan" data-toggle="modal" data-target="#myModal"></div>
+                                            <div class="button-rent  button--gutter_left"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--網頁內容Tab End-->
+            </div>
+        </aside>
+        <!--網頁內容 End-->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog flex-rcc">
+            <!-- Modal content-->
+            <div class="modal-content  modal-content-light">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">
+                        <span>新增標題</span>
+                    </h4>
+                    <hr>
+                </div>
+                <div class="modal-body modal-body-light">
+                    <svg id="floor1" class="LocalBlock" style="width: 166px; height: 166px; margin-left: auto; margin-right: auto; display: block;" xmlns="http://www.w3.org/2000/svg">
+                        <path class="block block1" stroke="#ffffff" d="M0,0L83,0L83,41.5L41.5,41.5L41.5,83L0,83Z" stroke-width="1" fill="#000000" opacity="0.2" id="1" cursor=""></path>
+                        <text class="block1" x="40" y="25" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,0,0)">1</text>
+                        <path class="block block2" stroke="#ffffff" d="M83,0L166,0L166,83L124.5,83L124.5,41.5L83,41.5Z" stroke-width="1" fill="#000000" opacity="0.2" id="2" cursor=""></path>
+                        <text class="block2" x="30" y="25" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,85,0)">2</text>
+                        <path class="block block3" stroke="#ffffff" d="M0,83L41.5,83L41.5,124.5L83,124.5L83,166L0,166Z" stroke-width="1" fill="#000000" opacity="0.2" id="3" cursor=""></path>
+                        <text class="block3" x="40" y="55" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,0,95)">3</text>
+                        <path class="block block4" stroke="#ffffff" d="M124.5,83L166,83L166,166L83,166L83,124.5L124.5,124.5Z" stroke-width="1" fill="#000000" opacity="0.2" id="4" cursor=""></path>
+                        <text class="block4" x="30" y="55" text-anchor="start" font="10px" stroke="none" fill="#ffffff" stroke-scale="true" stroke-width="0" opacity="1" transform="matrix(1,0,0,1,85,95)">4</text>
+                        <path class="block block5" stroke="#ffffff" d="M41.5,41.5L124.5,41.5L124.5,124.5L41.5,124.5Z" stroke-width="1" fill="#000000" opacity="0" id="5" cursor="" is-public="true"></path>
+                        <text class="block5 plan_info" x="83" y="83" text-anchor="middle" alignment-baseline="central" stroke="none" fill="#000000" stroke-scale="true" stroke-width="0" opacity="1" style="font-family: '微軟正黑體'; font-size: 12px;">A棟1樓</text>
+                    </svg>
+                </div>
+                <div class="modal-footer">
+                    <hr>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+</body>
+
+</html>

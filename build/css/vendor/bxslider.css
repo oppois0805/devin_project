@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* ==========================================================================
+   複寫bxslider style
+   @mixin ========================================================================= */
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 0 solid #fff !important;
+  left: -5px;
+  background-color: rgba(255, 255, 255, 0) !important;
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0); }

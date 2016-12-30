@@ -1,0 +1,77 @@
+/* ==========================================================================
+   撰寫lease
+   ========================================================================== */
+
+$lease_images_padding: 15px 25px 15px 25px
+$lease_height: 575px
+$lease_width: 1076px
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.lease
+	height: $lease_height
+	width: $lease_width
+
+.lease_top
+	height: 10%
+	+flex(row, flex-start, center)
+
+.lease_top_images
+	padding: $lease_images_padding
+
+.lease_content
+	height: 80%
+	padding-top: 10px
+
+.lease_content_input
+	width: 80%
+	overflow: auto
+	margin: 0 auto
+	
+.lease_bottom
+	display: flex
+	height: 10%
+
+.lease_content_input_left
+	float: left
+	+flex(column, center, center)
+	width: 50%
+
+.lease_content_input_right
+	float: left
+	+flex(column, center, center)
+	width: 50%
+
+.lease_content_top
+	height: 10%
+
+.lease_content_bottom
+	height: 90%
+	+flex(row, center, center)
+	> .bk
+		margin: 20px auto 20px auto
+
+.unit_group
+	+flex(row, flex-start, flex-start)
+
+.unit	
+	width: 86px
+	height: 45px
+	margin: 0 2px 0 2px
+	background-color: rgba(8, 26, 46, 0.1)
+	color: $white
+	border-radius: $b-borderRadius_3
+	cursor: pointer
+	+flex(row, center, center)
+	&:hover
+		background-color: $navyblue
+
+.upload
+	width: 45px
+	height: 45px
+	margin: 0 0 -5px 0
+	font-size: 1px
+	opacity: 0
+	cursor: pointer

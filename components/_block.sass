@@ -1,0 +1,68 @@
+/* ==========================================================================
+   撰寫local block
+   ========================================================================== */
+$block_height: 100%
+$bk_bg_color: rgba(255,255,255,0.5)
+$bk_active_bg_color: rgba(166, 255, 178, 0.8)
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.bk
+	cursor: pointer
+	border: 2px solid rgba(255, 255, 255, 0)
+	> li
+		height: 33%
+
+.bk_box
+	height: 100%
+	display: flex
+
+.bk_box_item
+	background-color: $bk_bg_color
+	cursor: pointer
+	position: relative
+	float: left
+	border: rgb(255, 255, 255) 1px solid
+	+flex(row,center,center)
+
+.bk_box_item_Text
+	color: $white
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.bk--l
+	width: 658px
+	height: 330px
+
+.bk--s
+	width: 335px
+	height: 172px
+
+.bk--active
+	width: 334px
+	border: $b-size_2 $white solid
+	transition: border 400ms ease-in-out
+
+.bk_box_item--active
+	background-color: $bk_active_bg_color
+	
+.bk_box_item--l
+	width: 74%
+	height: $block_height
+	font-size: 1.5vw
+	background-color: rgba(166, 255, 178, 0)
+	border: rgba(255, 255, 255, 0) 1px solid
+
+.bk_box_item--m
+	width: 27%
+	height: $block_height
+
+.bk_box_item--s
+	width: 14%
+	height: $block_height
+
+		

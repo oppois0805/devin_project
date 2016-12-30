@@ -1,0 +1,66 @@
+/* ==========================================================================
+   撰寫modal
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.modal-content
+.modal-body
+	padding: 0 !important
+
+.modal-header
+	padding: 15px 15px 0 15px !important
+	border-bottom: 0 !important
+
+.modal-footer
+	padding: 0 15px 15px 15px !important
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+//複寫bootstrap modal content
+.modal-content--light
+	margin-top: 110px
+	width: 470px
+
+//複寫bootstrap modal body
+.modal-body--light
+	padding: 20px !important
+
+.modal-input_content_check
+	width: 280px
+	display: flex
+
+.modal-input_content_check_item
+	+flex(row,center,center)
+	cursor: pointer
+
+.modal-setting
+	background-color: rgba(0, 0, 0, 0.15)
+	border: 1px solid #000
+	border-radius: 5px
+	overflow: hidden
+	transition: max-height .5s
+	> table 
+		width: 280px
+		thead > tr 
+			border-bottom: 1px solid #000
+			background-color: #445250
+			color: #fff
+			> th 
+				padding: 10px
+				text-align: center
+		tbody 
+			input 
+				width: 20px
+				height: 20px
+			> tr
+				&:hover
+					background-color: rgba(255,255,255,.4)
+				&::not(:last-child) 
+					border-bottom: 1px solid #000
+				> td
+					text-align: center
+					padding: 2px
+

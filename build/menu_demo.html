@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Light</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo  flex-cbc">
+                <div class="l-menu_logo_image">
+                    <img src="images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title  flex-c">
+                    <span class="l-title">
+                        系统管理员
+                    </span>
+                    <span class="l-title"> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <ul class="l-menu_nav" id="menu">
+                <li class="l-menu_nav_light">
+                    <div style="display: none">item</div>
+                </li>
+                <li class="l-menu_nav_Air">
+                    <div>item</div>
+                    <ul class="l-menu_child_nav">
+                        <li>
+                            <div>展示</div>
+                            <ul class="l-menu_child_nav">
+                                <li>
+                                    <div>即時資訊</div>
+                                    <ul class="l-menu_child_nav">
+                                        <li>
+                                            <div>樓層資訊</div>
+                                        </li>
+                                        <li>
+                                            <div>系統資訊</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>FCU</div>
+                            <ul class="l-menu_child_nav">
+                                <li>
+                                    <div>情境控制</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>分析</div>
+                            <ul class="l-menu_child_nav">
+                                <li>
+                                    <div>歷史資訊</div>
+                                    <ul class="l-menu_child_nav">
+                                        <li>
+                                            <div>樓層資訊</div>
+                                        </li>
+                                        <li>
+                                            <div>系統資訊</div>
+                                        </li>
+                                        <li>
+                                            <div>關鍵字查詢</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>效能分析</div>
+                                    <ul class="l-menu_child_nav">
+                                        <li>
+                                            <div>水系統分析</div>
+                                        </li>
+                                        <li>
+                                            <div>冰機分析</div>
+                                        </li>
+                                        <li>
+                                            <div>滷水泵分析</div>
+                                        </li>
+                                        <li>
+                                            <div>區域冰水泵分析</div>
+                                            <ul class="l-menu_child_nav">
+                                                <li>
+                                                    <div>樓層資訊</div>
+                                                </li>
+                                                <li>
+                                                    <div>系統資訊</div>
+                                                </li>
+                                                <li>
+                                                    <div>關鍵字查詢</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div>冷卻水泵分析</div>
+                                        </li>
+                                        <li>
+                                            <div>冷卻水塔分析</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="l-menu_nav_power">
+                    <div style="display: none">item</div>
+                </li>
+                <li class="l-menu_nav_curtain">
+                    <div style="display: none">item</div>
+                </li>
+            </ul>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav  flex-r">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                    <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                    </ul>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top flex">
+                    <select class="selectpicker  select  select--l">
+                        <option class="option">A棟</option>
+                        <option class="option">B棟</option>
+                        <option class="option">...</option>
+                    </select>
+                    <select class="selectpicker select  select--l select--gutter_left">
+                        <option class="option">1樓</option>
+                        <option class="option">2樓</option>
+                        <option class="option">...</option>
+                    </select>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="nb nb-l">
+                        <ul class="nb_ul flex-r">
+                            <li id="information" class="nb_li  nb_li-half nb_li--active"><span class="nb_span">即时资讯</span></li>
+                            <li id="analysis" class="nb_li  nb_li-half"><span class="nb_span">系统分析</span>
+                            </li>
+                        </ul>
+                        <div class="nb_border">
+                            <div id="Tab_border" class="nb_line  nb_line-half"></div>
+                        </div>
+                        <div class="nb_hr"></div>
+                        <div class="nb_content">
+                            <div id="information_content" class="is-show">
+                                <img data-toggle="modal" data-target="#myModal" style="width:100%" src="../images/3_schedule/img_plan_fake.png" alt=" ">
+                            </div>
+                            <div id="analysis_content" class="flex-c  is-hide">
+                                <div class="flex">
+                                    <select class="selectpicker  select  select--m">
+                                        <option class="option">圖表1</option>
+                                        <option class="option">圖表2</option>
+                                        <option class="option">...</option>
+                                    </select>
+                                    <select class="selectpicker  select  select--m select--gutter_left">
+                                        <option style="width:1;height:21px" class="option">2016年</option>
+                                        <option class="option">2015年</option>
+                                        <option class="option">2014年</option>
+                                        <option class="option">...</option>
+                                    </select>
+                                    <select class="selectpicker  select  select--m select--gutter_left">
+                                        <option class="option">樓層選單</option>
+                                        <option class="option">1樓</option>
+                                        <option class="option">2樓</option>
+                                        <option class="option">...</option>
+                                    </select>
+                                    <select class="selectpicker  select  select--m select--gutter_left">
+                                        <option class="option">樓層選單</option>
+                                        <option class="option">1樓</option>
+                                        <option class="option">2樓</option>
+                                        <option class="option">...</option>
+                                    </select>
+                                    <div class="button-report mla"></div>
+                                </div>
+                                <div class="echart echart--l" id="main"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--網頁內容Tab End-->
+            </div>
+        </aside>
+        <!--網頁內容 End-->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog flex-rcc">
+            <!-- Modal content-->
+            <div class="modal-content  modal-content-light">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">
+                        <span>主管辦公室</span>
+                    </h4>
+                    <hr>
+                </div>
+                <div class="modal-body modal-body-light">
+                    <div class="flex-c">
+                        <div class="flex-rcc">
+                            <span name="ProgressPercent">0%</span>
+                        </div>
+                        <div class="flex-rcc" name="ProgressBar_Block">
+                            <input id="ProgressBar2" style="width:250px" class="progressbar  progressbar-light" name="ProgressBar" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <hr>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-slider.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/Action.js"></script>
+    <script>
+    $(function() {
+        $("#menu").menu({
+            classes: {
+                "ui-menu": "highlight"
+            }
+        });
+    });
+
+    $("input[name=ProgressBar]").each(function() {
+        new Slider("#" + $(this).attr("id"), {
+            min: 0,
+            max: 100,
+            value: 0,
+            step: 10,
+            tooltip_position: 'bottom'
+        });
+    });
+    $("input[name=ProgressBar]").on("change", function() {
+        $(this).parent().parent().parent().find('span[name=ProgressPercent]').text($(this).parent().parent().parent().find(".tooltip-inner").text() + '%');
+    });
+    //remove tooltip
+    $(".tooltip").each(function() {
+        $(this).css('display', 'none');
+    });
+    </script>
+    <script>
+    $("#information").click(function(event) {
+        $("#information_content").removeClass('is-hide').addClass('is-show');
+        $("#analysis_content").removeClass('is-show').addClass('is-hide');
+    });
+
+    $("#analysis").click(function(event) {
+        $("#information_content").removeClass('is-show').addClass('is-hide');
+        $("#analysis_content").removeClass('is-hide').addClass('is-show');
+    });
+    </script>
+    <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+
+    // 指定图表的配置项和数据
+    var option = {
+        grid: {
+            show: true,
+            bottom: 50
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        }],
+        yAxis: [{
+            type: 'value',
+            name: '水量',
+            min: 0,
+            max: 250,
+            interval: 50,
+            axisLabel: {
+                formatter: '{value} ml'
+            }
+        }, {
+            type: 'value',
+            name: '温度',
+            min: 0,
+            max: 25,
+            interval: 5,
+            axisLabel: {
+                formatter: '{value} °C'
+            }
+        }],
+        series: [
+
+            {
+                name: '蒸发量',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            }, {
+                name: '降水量',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            }, {
+                name: '平均温度',
+                type: 'line',
+                yAxisIndex: 1,
+                data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+            }
+        ]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+    </script>
+</body>
+
+</html>

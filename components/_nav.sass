@@ -1,0 +1,99 @@
+/* ==========================================================================
+   撰寫nav
+   ========================================================================== */
+
+$nav_font_color: 			rgba(19, 29, 41, 0.5)
+$nav_font_active_color: 	#131D29
+$nav_size: 					18px 0 15px 0
+
+$nav_line_color:			#081a2e
+$nav_hr_height: 			2px
+
+$nav_border_height: 		4.5px
+$nav_border_width: 			100%
+
+$nav_border_array: 			half 50%, three 33.5%
+
+// -------------------------------------
+//   @mixin
+// -------------------------------------
+// --------------------------------------------------
+// font
+// --------------------------------------------------
+=navtab-mixin()
+	color: $nav_font_color
+	cursor: pointer
+	background: none
+	border: none
+	> span
+		text-decoration: none
+		color: $nav_font_active_color
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.nb
+	width: 100%
+	float: left
+
+.nb_ul
+	width: 100%
+	display: table
+
+.nb_li
+	width: auto
+	display: table-cell
+	padding: $nav_size
+	cursor: pointer
+	text-align: center
+	&:hover
+		+navtab-mixin
+	&:active
+		+navtab-mixin
+		transform: translateX(1px) translateY(1px)
+
+.nb_span
+	font-size: $font-size_16
+	color: $nav_font_color
+
+.nb_border
+	position: relative
+
+.nb_line
+	height: $nav_border_height
+	width: $nav_border_width
+	background-color: $nav_line_color
+	position: absolute
+	margin-top: -0.6px
+
+.nb_hr
+	background-color: $nav_line_color
+	height: $nav_hr_height
+
+.nb_content
+	padding-top: 20px
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.nb_li--active
+	> span
+		color: $nav_font_active_color
+		background: none 
+		text-decoration: none
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.nb--l
+	width: 100%
+
+.nb--m
+	width: 60%
+
+@each $name, $width in $nav_border_array
+	.nb_line-#{$name}
+		width: $width

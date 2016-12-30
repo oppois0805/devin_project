@@ -1,0 +1,40 @@
+/* ==========================================================================
+   撰寫information
+   ========================================================================== */
+$information_height: 180px
+$information_width_l: 600px
+$information_width_m: 400px
+$information_color: #697F8D
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.information
+	height: $information_height
+
+.information_title
+	height: 20%
+	color: $white
+	font-size: $font-size_16
+	background-color: $information_color
+	padding: 12px 0 0 20px
+	box-sizing: border-box
+	border-top-left-radius: $b-borderRadius_4dot5
+	border-top-right-radius: $b-borderRadius_4dot5
+
+.information_content
+	+flex(row, space-around, center)
+	height: 80%
+	border: 1px solid $information_color
+	border-bottom-left-radius: $b-borderRadius_4dot5
+	border-bottom-right-radius: $b-borderRadius_4dot5
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.information--l
+	width: $information_width_l
+
+.information--m
+	width: $information_width_m

@@ -1,0 +1,75 @@
+/* ==========================================================================
+   撰寫dropdown list 
+   ========================================================================== */
+
+$dl_fontsize:		 15px
+$dl_gutter: 		 15px
+$dl_border: 		 3px
+$dl_size_height:     45px
+$dl_size_xl_width: 	 280px
+$dl_size_l_width: 	 200px
+$dl_size_m_width: 	 160px
+$dl_size_s_width: 	 120px
+$dl_size_xs_width:   70px
+$dl_option_bg_color: #1d2c3d
+
+// -------------------------------------
+//   @mixin
+// -------------------------------------
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.select
+	font-size: $dl_fontsize 
+	border-radius: $dl_border 
+	background-color: $white_opacity_40 
+	> .btn
+		padding: 11px 0px 9px 15px 
+	> .btn-default
+		color: #333
+		background-color: transparent
+		border-color: #ccc
+		&:hover
+			background-color: $white_opacity_60
+	
+.option
+	background-color: $dl_option_bg_color
+	font-weight: bold
+	line-height: 25px
+	color: $white
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Sizes ----- //
+.select--xl
+	width: $dl_size_xl_width !important
+
+.select--l
+	width: $dl_size_l_width !important
+
+.select--m
+	width: $dl_size_m_width !important
+
+.select--s
+	width: $dl_size_s_width !important
+
+.select--xs
+	width: $dl_size_xs_width !important
+
+// ----- gutter ----- //
+.select--gutter_left	
+	margin-left: $dl_gutter !important
+
+.select--gutter_right	
+	margin-right: $dl_gutter !important
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.select-modal
+	background-color: $black_opacity_10

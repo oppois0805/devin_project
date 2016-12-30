@@ -1,0 +1,133 @@
+/* ==========================================================================
+   撰寫button
+   ========================================================================== */
+
+$bt_gutter: 		 15px
+
+.button
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ======home====== //
+
+.button-report
+	+background_image($imageUrl_home, 'true', 'btn_download report_n','btn_download report_h', 'btn_download report_h', '','png', 45,160)
+
+.button-credencial
+	+background_image($imageUrl_home, 'true', 'btn_print_n','btn_print_h', 'btn_print_h', 'btn_print_h','png', 45,160)
+	margin-left: 260px
+	
+.button-confirm
+	+background_image($imageUrl_home, 'true', 'btn_confirm_n','btn_confirm_a', 'btn_confirm_a', 'btn_confirm_a','png', 45,160)
+
+.button-left
+	+background_image($imageUrl_home, 'true', 'btn_left_n','btn_left_a', '', '','png', 35,35)
+
+.button-right
+	+background_image($imageUrl_home, 'true', 'btn_right_n','btn_right_a', '', '','png', 35,35)
+
+// ======home====== //
+
+// ======setting====== //
+
+.button-add
+	+background_image($imageUrl_setting, 'true', 'btn_add_n','btn_add_h', 'btn_add_h', 'btn_add_h','png', 45,160)
+
+.button-set
+	+background_image($imageUrl_setting, 'true', 'btn_set','', '', '','png', 45,160)
+	height: 20px
+	width: 45px
+	&:hover
+		opacity: 0.3
+
+.button-tenant_print
+	+background_image($imageUrl_setting, 'true', 'btn_tenant_record_n','btn_tenant_record_h', 'btn_tenant_record_h', 'btn_tenant_record_h','png', 45,210)
+
+.button-tenant_add
+	+background_image($imageUrl_setting, 'true', 'btn_add_tenant_n','btn_add_tenant_a', 'btn_add_tenant_a', 'btn_add_tenant_a','png', 45,186)
+
+.button-plan
+	+background_image($imageUrl_setting, 'true', 'btn_plane_n','btn_plane_h', 'btn_plane_h', 'btn_plane_h','png', 25,25)
+
+.button-setting-plan_image
+	+background_image($imageUrl_setting, 'true', 'img_plane_n','img_plane_h', 'img_plane_h', 'img_plane_h','png', 45,45)
+
+.button-rent
+	+background_image($imageUrl_setting, 'true', 'btn_rent_n','btn_rent_h', 'btn_rent_h', 'btn_rent_h','png', 25,30)
+
+.button-search
+	+background_image($imageUrl_setting, 'true', 'btn_search_n','btn_search_h', 'btn_search_h', 'btn_search_h','png', 45,45)
+
+.button-setting-next
+	+background_image($imageUrl_setting, 'true', 'btn_next_n','btn_next_a', 'btn_next_a', 'btn_next_a','png', 45, 160)
+
+.button-setting-prev
+	+background_image($imageUrl_setting, 'true', 'btn_back_n','btn_back_a', 'btn_back_a', 'btn_back_a','png', 45, 160)
+
+.button-setting-cancel
+	+background_image($imageUrl_setting, 'true', 'btn_cancel_n','btn_cancel_a', 'btn_cancel_a', 'btn_cancel_a','png', 45, 160)
+
+.button-setting-file
+	+background_image($imageUrl_setting, 'true', 'btn_upload_n','btn_upload_h', 'btn_upload_h', 'btn_upload_h','png', 45, 45)
+
+.button-setting-add
+	+background_image($imageUrl_setting, 'true', 'btn_plane_setting_add_n','btn_plane_setting_add_h', 'btn_plane_setting_add_h', 'btn_plane_setting_add_h','png', 45, 80)
+
+.button-setting-merge
+	+background_image($imageUrl_setting, 'true', 'btn_plane_setting_merge_n','btn_plane_setting_merge_h', 'btn_plane_setting_merge_h', 'btn_plane_setting_merge_h','png', 45, 80)
+
+
+// ======setting====== //
+
+// ======schedule====== //
+
+.button-holiday
+	+background_image($imageUrl_schedule, 'true', 'btn_holiday_n','btn_holiday_h', 'btn_holiday_h', 'btn_holiday_h','png', 45,160)
+
+.button-addtime
+	+background_image($imageUrl_schedule, 'true', 'btn_addtime_n','btn_addtime_h', 'btn_addtime_h', 'btn_addtime_h','png', 45,160)
+
+.button-reset
+	+background_image($imageUrl_schedule, 'true', 'btn_reset_n','btn_reset_h', 'btn_reset_h', 'btn_reset_h','png', 45,160)
+
+.button-save
+	+background_image($imageUrl_schedule, 'true', 'btn_save_n','btn_save_h', 'btn_save_h', 'btn_save_h','png', 45,160)
+
+// ======schedule====== //
+
+// ======dashboard====== //
+
+.button-back
+	display: none
+	+background_image($imageUrl_dashboard, 'true', 'btn_back_n','btn_back_n', 'btn_back_n', 'btn_back_n','png', 45,45)
+
+.button-edit
+	+background_image($imageUrl_dashboard, 'true', 'btn_edit_n','btn_edit_n', 'btn_edit_n', 'btn_end_n','png', 45,160)
+
+// ======dashboard====== //
+
+// ======saving====== //
+
+.button-saving-ok
+	+background_image($imageUrl_saving, 'true', 'btn_ok_n','btn_ok_h', 'btn_ok_h', 'btn_ok_h','png', 45,160)
+
+.button-saving-excel
+	+background_image($imageUrl_saving, 'true', 'btn_excel_n','btn_excel_h', 'btn_excel_h', 'btn_excel_h','png', 45,160)
+
+.button-saving-prev
+	+background_image($imageUrl_saving, 'true', 'btn_prev_n','btn_prev_n', 'btn_prev_n', 'btn_prev_n','png', 45,160)
+
+.button-saving-next
+	+background_image($imageUrl_saving, 'true', 'btn_next_n','btn_next_n', 'btn_next_n', 'btn_next_n','png', 45,160)
+
+// ======saving====== //
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- gutter ----- //
+.button--gutter_left	
+	margin-left: $bt_gutter !important

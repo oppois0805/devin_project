@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>setting</title>
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo">
+                <div class="l-menu_logo_image">
+                    <img src="../images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title">
+                    <span class="l-title" ">
+                        系统管理员
+                    </span>
+                    <span class="l-title ""> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="../images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <div class="l-menu_nav">
+                <div class="l-menu_nav_light"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power active"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="dropdown">
+                        <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                        <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                    <span class="setting_title">
+                        setting
+                    </span>
+                    <div class="button-add mla" data-toggle="modal" data-target="#myModal"></div>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="grid-11">
+                                        setting title
+                                    </th>
+                                    <th class="grid-1">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                        <div class="dropdown" style="position: relative;">
+                                            <div class="button-set dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                            </div>
+                                            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX" style="margin-left:18px">
+                                                <li><a href="#" role="tab" id="setting" name="tagEdit" data-target="#TagModal" data-toggle="modal">修改</a></li>
+                                                <li><a href="javascript:void(0)" data-target="#CoordinateModal" data-toggle="modal">座标</a></li>
+                                                <li><a href="javascript:void(0)" role="tab" class="delete" data-toggle="tab" aria-controls="dropdown1">删除</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--網頁內容Tab End-->
+            </div>
+        </aside>
+        <!--網頁內容 End-->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content  modal-content-light">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">
+                        <span>新增標題</span>
+                    </h4>
+                    <hr>
+                </div>
+                <div class="modal-body modal-body-light">
+                    <div class="input-group">
+                        <div class="input-group_title">
+                            標題
+                        </div>
+                        <div class="input-group_content">
+                            <input type="text" class="input  input-modal input--l">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group_title">
+                            標題
+                        </div>
+                        <div class="input-group_content">
+                            <select class="selectpicker  select  select-modal select--xl">
+                                <option class="option" value="樓層選單">-- 請選擇公司 --</option>
+                                <option class="option">國生</option>
+                                <option class="option">聚如</option>
+                                <option class="option">通康</option>
+                            </select>
+                        </div>
+                    </div>
+                   <div class="input-group">
+                        <div class="input-group_title">
+                            標題
+                        </div>
+                        <div class="input-group_content">
+                            <div class="modal-input_content_check">
+                                <label class="modal-input_content_check_item">
+                                    <input type="radio" class="check" name="Editcheck" checked="">启用</label>
+                                <label class="modal-input_content_check_item">
+                                    <input type="radio" class="check  check--gutter_left" name="Editcheck">关闭</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group_title">
+                            標題
+                        </div>
+                        <div class="input-group_content">
+                            <div class="modal-setting">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>桌面顯示</th>
+                                            <th>popover顯示</th>
+                                            <th>參數</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>R相電壓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>S相電壓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>T相電壓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>R相電流</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>S相電流</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>T相電流</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>即時用電</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>累積用電量</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>功率因數</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="" />
+                                        </td>
+                                        <td>頻率</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <hr>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+</body>
+
+</html>

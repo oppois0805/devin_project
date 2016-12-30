@@ -1,0 +1,245 @@
+/* ==========================================================================
+   撰寫saving
+   ========================================================================== */
+
+.saving
+	padding: 20px
+	height: 600px
+	border: 1px solid #fff
+	border-radius: 5px
+	box-sizing: border-box
+
+/* ==========================================================================
+   展示
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// ------------------------------------
+
+.saving_build
+	+flex(row, space-around, flex-start)
+	flex-wrap: wrap
+	height: 100%
+
+//------- 建物用電 -------//
+.saving_build > .building_tab
+	> .tab-content
+		height: 94%
+		border: 1px solid #697F8D	
+		border-bottom-left-radius: $b-borderRadius_4dot5
+		border-bottom-right-radius: $b-borderRadius_4dot5
+		background-color: transparent	
+	> .nav-tabs 
+		border-bottom: 0 solid #ddd
+		> li
+			margin-bottom: 0
+			> a
+				line-height: .5
+				margin-right: 0
+				border-left: 1px solid #697F8D
+				border-top: 1px solid #697F8D 
+				border-right: 1px solid #697F8D 
+				border-bottom: 0 solid #697F8D
+				color: $navyblue
+			&.active
+				> a
+					color: $white
+					background-color: #697F8D
+					border-left: 1px solid transparent
+					border-top: 1px solid transparent 
+					border-right: 1px solid transparent 
+					border-bottom: 0 solid transparent
+					cursor: default
+
+.building_sixmonths
+	display: block
+
+.building_sixmonths_chart
+	width: 100%
+	height: 195px
+	margin: 0 0 0 20px
+
+.building_sixmonths_unit
+	position: absolute
+	margin: -46px 0 0 0px
+
+.building_sm
+	width: 100%
+	height: 195px
+	margin: 0 0 0 20px
+
+.building_instant
+	+flex(row, space-between, center)
+	height: 100%
+	width: 95%
+	font-size: $font-size_15
+	> table
+		height: 80%
+		width: 45%
+		> thead > tr > th
+			height: 0
+		> tbody > tr > td:nth-child(2)
+			text-align: right
+			padding-right: 10px
+
+.building_tab
+	height: 62%
+	width: 98.5%
+
+.building_tab_trend
+	display: block
+
+.building_tab_trend_chart
+	width: 1050px
+	height: 340px
+	margin: 0 0 0 20px
+
+.building_tab_trend_unit
+	position: absolute
+	margin: -66px 0 0 15px
+
+// sm : six month
+.building_tab_sm
+	display: block
+
+.building_tab_sm_top
+	+flex(row, space-between, center)
+	width: 85%
+	@extend %tab_top
+
+.building_tab_sm_top_date
+	+flex(row, center, center)
+
+.building_tab_sm_top_btn
+	+flex(row, center, center)
+
+.building_tab_sm_content
+	display: block
+
+.building_tab_sm_content_chart
+	width: 1050px
+	height: 315px
+	margin: -31px 0 0 0
+
+.building_tab_sm_content_unit
+	position: absolute
+	margin: -58px 0 0 5px
+
+// ye : yesterday
+.building_tab_ye
+	display: block
+
+.building_tab_ye_top
+	+flex(row, space-between, center)
+	width: 98%
+	@extend %tab_top
+
+.building_tab_ye_top_date
+	+flex(row, space-around, center)
+	font-weight: bold
+	width: 20%
+
+.building_tab_ye_top_time
+	+flex(row, space-between, center)
+	width: 20%
+	> input 
+		width: 15px
+		height: 15px
+
+.building_tab_ye_content
+	@extend %tab_content
+
+// 1he : 1 hour Electricity 
+.building_tab_1he
+	display: block
+
+.building_tab_1he_top
+	+flex(row, flex-start, center)
+	@extend %tab_top
+
+.building_tab_ye_content
+	@extend %tab_content
+
+// dt : Demand trend
+.building_tab_dt
+	display: block
+
+.building_tab_dt_top
+	+flex(row, space-between, center)
+	width: 65%
+	@extend %tab_top
+
+.building_tab_dt_top_date
+	+flex(row, center, center)
+
+.building_tab_dt_top_btn
+	+flex(row, center, center)
+
+.building_tab_dt_content
+	display: block
+
+.building_tab_dt_content_chart
+	width: 1050px
+	height: 315px
+	margin: -22px 0 0 0
+
+.building_tab_dt_content_unit
+	position: absolute
+	margin: -58px 0 0 5px
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%tab_top
+	padding: 10px
+
+%tab_content
+	width: 98%
+	height: 250px
+	margin: 0 auto
+	border: 1px solid #ddd
+
+//------- 電力系統 -------//
+.power_top
+	width: 100%
+
+.power_content
+	overflow: auto
+	height: 92%
+	width: 100%
+	margin: 5px
+
+/* ==========================================================================
+   管理
+   ========================================================================== */
+ 
+// -------------------------------------
+//   Base
+// ------------------------------------
+
+.saving_abnormal
+	display: block
+
+//------- 異常警報 -------//
+
+.saving_abnormal_date
+	+flex(row, space-between, center)
+
+.saving_abnormal_date_left
+	+flex(row, space-around, center)
+	width: 45%
+
+.saving_abnormal_date_right
+	+flex(row, space-around, center)
+	width: 45%
+
+/* ==========================================================================
+   分析
+   ========================================================================== */
+ 
+// -------------------------------------
+//   Base
+// ------------------------------------
+

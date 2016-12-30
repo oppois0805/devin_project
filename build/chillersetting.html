@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>chiller</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo">
+                <div class="l-menu_logo_image">
+                    <img src="images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title">
+                    <span class="l-title">
+                        系统管理员
+                    </span>
+                    <span class="l-title"> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <ul class="l-menu_nav" id="menu">
+                <li class="l-menu_nav_light">
+                    <div style="display: none">item</div>
+                </li>
+                <li class="l-menu_nav_Air">
+                    <div>item</div>
+                    <ul class="l-menu_child_nav">
+                        <li>
+                            <div>展示</div>
+                            <ul class="l-menu_child_nav">
+                                <li>
+                                    <div>即時資訊</div>
+                                    <ul class="l-menu_child_nav">
+                                        <li>
+                                            <div>樓層資訊</div>
+                                        </li>
+                                        <li>
+                                            <div>系統資訊</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>FCU</div>
+                            <ul class="l-menu_child_nav">
+                                <li>
+                                    <div>情境控制</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>分析</div>
+                            <ul class="l-menu_child_nav">
+                                <li>
+                                    <div>歷史資訊</div>
+                                    <ul class="l-menu_child_nav">
+                                        <li>
+                                            <div>樓層資訊</div>
+                                        </li>
+                                        <li>
+                                            <div>系統資訊</div>
+                                        </li>
+                                        <li>
+                                            <div>關鍵字查詢</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>效能分析</div>
+                                    <ul class="l-menu_child_nav">
+                                        <li>
+                                            <div>水系統分析</div>
+                                        </li>
+                                        <li>
+                                            <div>冰機分析</div>
+                                        </li>
+                                        <li>
+                                            <div>滷水泵分析</div>
+                                        </li>
+                                        <li>
+                                            <div>區域冰水泵分析</div>
+                                            <ul class="l-menu_child_nav">
+                                                <li>
+                                                    <div>樓層資訊</div>
+                                                </li>
+                                                <li>
+                                                    <div>系統資訊</div>
+                                                </li>
+                                                <li>
+                                                    <div>關鍵字查詢</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div>冷卻水泵分析</div>
+                                        </li>
+                                        <li>
+                                            <div>冷卻水塔分析</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="l-menu_nav_power">
+                    <div style="display: none">item</div>
+                </li>
+                <li class="l-menu_nav_curtain">
+                    <div style="display: none">item</div>
+                </li>
+            </ul>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="dropdown">
+                        <div class="l-wrapper_nav_setting dropdown-toggle" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                        <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="chiller">
+                    <div class="chiller_content">
+                        <div class="chiller_content_item">
+                            <h1>冰水主机开放时间</h1>
+                        </div>
+                        <div class="chiller_content_item">
+                            <select class="selectpicker  select  select--l">
+                                <option class="option">A棟</option>
+                                <option class="option">B棟</option>
+                                <option class="option">...</option>
+                            </select>
+                        </div>
+                        <div class="chiller_content_item">
+                            <span class="chiller_content_item_title">固定开启日</span>
+                            <div class="chiller_content_item_check">
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editcheck">一</label>
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editcheck">二</label>
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editcheck">三</label>
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editcheck">四</label>
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editcheck">五</label>
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editcheck">六</label>
+                                <label>
+                                    <input type="checkbox" class="check  check--gutter_left" name="Editradio">日</label>
+                            </div>
+                        </div>
+                        <div class="chiller_content_item">
+                            <span class="chiller_content_item_title">开放时段</span>
+                            <div class="chiller_content_item_time">
+                                <span>起</span>
+                                <select class="selectpicker  select  select--xs">
+                                    <option class="option">00</option>
+                                    <option class="option">01</option>
+                                    <option class="option">02</option>
+                                    <option class="option">03</option>
+                                    <option class="option">04</option>
+                                    <option class="option">05</option>
+                                    <option class="option">06</option>
+                                    <option class="option">07</option>
+                                    <option class="option">08</option>
+                                    <option class="option">09</option>
+                                    <option class="option">10</option>
+                                    <option class="option">11</option>
+                                    <option class="option">12</option>
+                                    <option class="option">13</option>
+                                    <option class="option">14</option>
+                                    <option class="option">15</option>
+                                    <option class="option">16</option>
+                                    <option class="option">17</option>
+                                    <option class="option">18</option>
+                                    <option class="option">19</option>
+                                    <option class="option">20</option>
+                                    <option class="option">21</option>
+                                    <option class="option">22</option>
+                                    <option class="option">23</option>
+                                    <option class="option">...</option>
+                                </select>
+                                <span>:</span>
+                                <select class="selectpicker  select  select--xs">
+                                    <option class="option">00</option>
+                                    <option class="option">01</option>
+                                    <option class="option">...</option>
+                                </select>
+                                <span>起</span>
+                                <select class="selectpicker  select  select--xs">
+                                    <option class="option">00</option>
+                                    <option class="option">01</option>
+                                    <option class="option">...</option>
+                                </select>
+                                <span>:</span>
+                                <select class="selectpicker  select  select--xs">
+                                    <option class="option">00</option>
+                                    <option class="option">01</option>
+                                    <option class="option">...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chiller_content_item">
+                            <div class="button-confirm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--網頁內容Tab End-->
+            </div>
+        </aside>
+        <!--網頁內容 End-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-slider.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+</body>
+
+</html>

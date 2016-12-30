@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>saving_abnormal</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="stylesheets/application.css">
+    <link rel="stylesheet" href="stylesheets/vendor/bootstrap/bootstrap-slider.css">
+    <link rel="stylesheet" href="stylesheets/jquery-ui.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo  flex-cbc">
+                <div class="l-menu_logo_image">
+                    <img src="images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title  flex-c">
+                    <span class="l-title">
+                        系统管理员
+                    </span>
+                    <span class="l-title"> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <ul class="l-menu_nav" id="menu">
+                <li class="l-menu_nav_light">
+                    <div style="display: none">123</div>
+                </li>
+                <li class="l-menu_nav_Air l-menu_has_child">
+                    <ul class="l-menu_child_nav">
+                        <li>
+                            <div>展示</div>
+                        </li>
+                        <li>
+                            <div>管理</div>
+                        </li>
+                        <li>
+                            <div>分析</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="l-menu_nav_power">
+                    <div style="display: none">123</div>
+                </li>
+                <li class="l-menu_nav_curtain">
+                    <div style="display: none">123</div>
+                </li>
+            </ul>
+            <!--  <div class="l-menu_nav">
+                <div class="l-menu_nav_light active"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div> -->
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav  flex-r">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                    <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                    </ul>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                    <select class="selectpicker  select  select--l">
+                        <option class="option">即時資訊</option>
+                    </select>
+                    <select class="selectpicker select  select--l select--gutter_left">
+                        <option class="option">建物用電</option>
+                        <option class="option" selected>電力系統</option>
+                    </select>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="saving">
+                        <div class="saving_abnormal">
+                            <div class="saving_abnormal_date">
+                                <div class="saving_abnormal_date_left">
+                                    <div>
+                                        <input type="radio" class="radio" id="rblType_1" name="rblType">
+                                        <label for="rblType_1">全天</label>
+                                        <input type="radio" id="rblType_2" name="rblType">
+                                        <label for="rblType_2">白天</label>
+                                        <input type="radio" id="rblType_3" name="rblType">
+                                        <label for="rblType_3">晚上</label>
+                                    </div>
+                                    <div>
+                                        <span>發生日期範圍</span>
+                                        <input type="text" class="input  input--s" name="datepicker"> &nbsp;&nbsp;~
+                                        <input type="text" class="input  input--s" name="datepicker">
+                                    </div>
+                                </div>
+                                <div class="saving_abnormal_date_right">
+                                    <div>
+                                        <input type="radio" id="rblType_1" name="rblType">
+                                        <label for="rblType_1">全天</label>
+                                        <input type="radio" id="rblType_2" name="rblType">
+                                        <label for="rblType_2">白天</label>
+                                        <input type="radio" id="rblType_3" name="rblType">
+                                        <label for="rblType_3">晚上</label>
+                                    </div>
+                                    <div>
+                                        <span>發生日期範圍</span>
+                                        <input type="text" class="input  input--s" name="datepicker"> &nbsp;&nbsp;~
+                                        <input type="text" class="input  input--s" name="datepicker">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="saving_abnormal_setting">
+                            </div>
+                            <div class="saving_abnormal_result">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--網頁內容Tab End-->
+            </div>
+        </aside>
+        <!--網頁內容 End-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-slider.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/Action.js"></script>
+    <script>
+    $(function() {
+
+        $("#menu").menu({
+            classes: {
+                "ui-menu": "highlight"
+            }
+        });
+
+        $("input[name=datepicker]").each(function(index, el) {
+            $(this).datepicker({
+                showOn: "button",
+                buttonImage: "images/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!-- @@master  = layout/layout.html-->
+<!-- @@block  =  title-->
+<title>power</title>
+<!-- @@close-->
+<!-- @@block  =  content-->
+<!--網頁內容Top Start-->
+<div class="l-wrapper_content_top">
+    <select class="selectpicker  select  select--l">
+        <option class="option" value="樓層選單">-- 請選擇公司 --</option>
+        <option class="option">國生</option>
+        <option class="option">聚如</option>
+        <option class="option">通康</option>
+    </select>
+</div>
+<!--網頁內容Top End-->
+<!--網頁內容Tab Start-->
+<div class="l-wrapper_bottom_content">
+    <div class="nb nb--l">
+        <ul class="nb_ul">
+            <li id="valuation" class="nb_li nb_li--active"><span class="nb_span">計價訊息</span></li>
+            <li id="ElectricityBonus" class="nb_li"><span class="nb_span">電費儲值</span>
+            </li>
+            <li id="message" class="nb_li"><span class="nb_span">簡訊管理</span>
+            </li>
+        </ul>
+        <div class="nb_border">
+            <div id="Tab_border" class="nb_line  nb_line-three"></div>
+        </div>
+        <div class="nb_hr"></div>
+        <div class="nb_content">
+            <!-- 計價資訊 start-->
+            <div id="valuation_content" class="valuation  is-show">
+                <div class="nb  nb--m">
+                    <ul class="nb_ul">
+                        <li id="electricity" class="nb_li nb_li--active"><span class="nb_span">電費資訊</span></li>
+                        <li id="analysis" class="nb_li"><span class="nb_span">分析報表</span>
+                        </li>
+                    </ul>
+                    <div class="nb_border">
+                        <div id="electricityTab_border" class="nb_line  nb_line-half"></div>
+                    </div>
+                    <div class="nb_hr"></div>
+                    <div class="nb_content">
+                        <div id="electricity_content" class="electricity  is-show">
+                            <div class="electricity_first">
+                                <div class="electricity_first_title">
+                                    <div class="power_title">一般电费 (元) / 月</div>
+                                    <div class="power_title">加班空调电费 (元) / 月</div>
+                                </div>
+                                <div class="electricity_first_value">
+                                    <div class="box  box--m">
+                                        <span class="power_value">1,512</span>
+                                    </div>
+                                    <div class="box  box--m">
+                                        <span class="power_value">1,512</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="electricity_second  box  box--l">
+                                <div class="electricity_second_content">
+                                    <span class="power_title">累计电费 (元) /年</span>
+                                    <span class="power_value">18,700</span>
+                                </div>
+                            </div>
+                            <div class="electricity_third">
+                                <div class="electricity_third_content">
+                                    <div>
+                                        <span class="power_title">余额 (元) /年</span>
+                                        <span class="power_value">3,000</span>
+                                    </div>
+                                </div>
+                                <div class="electricity_third_send">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="analysis_content" class="analysis is-hide">
+                            <div class="analysis_top">
+                                <select class="selectpicker  select  select--m">
+                                    <option class="option">2016</option>
+                                    <option class="option">2015</option>
+                                    <option class="option">...</option>
+                                </select>
+                                <select class="selectpicker  select  select--m select--gutter_left">
+                                    <option class="option">--全部--</option>
+                                    <option class="option">1月</option>
+                                    <option class="option">2月</option>
+                                    <option class="option">...</option>
+                                </select>
+                                <select class="selectpicker  select  select--m select--gutter_left">
+                                    <option class="option">--全部--</option>
+                                    <option class="option">1日</option>
+                                    <option class="option">2日</option>
+                                    <option class="option">...</option>
+                                </select>
+                            </div>
+                            <div class="analysis_content">
+                                <div class="echart echart--m" id="main"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="local">
+                    <div class="button-credencial"></div>
+                    <div class="local_content">
+                        <div class="local_content_block">
+                            <ul class="bxslider">
+                                <ul class="bk  bk--s">
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--m"><span class="bk_box_item_Text">1</span></div>
+                                            <div class="bk_box_item  bk_box_item--m  bk_box_item--active  mla"><span class="bk_box_item_Text">12</span></div>
+                                            <div class="bk_box_item  bk_box_item--m"><span class="bk_box_item_Text">11</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">2</span></div>
+                                            <div class="bk_box_item  bk_box_item--l ">A栋1楼</div>
+                                            <div class="bk_box_item  bk_box_item--s mla"><span class="bk_box_item_Text">10</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">3</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">4</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">5</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">6</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">7</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">8</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">9</span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="bk  bk--s">
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--m"><span class="bk_box_item_Text">1</span></div>
+                                            <div class="bk_box_item  bk_box_item--m  bk_box_item--active  mla"><span class="bk_box_item_Text">12</span></div>
+                                            <div class="bk_box_item  bk_box_item--m"><span class="bk_box_item_Text">11</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">2</span></div>
+                                            <div class="bk_box_item  bk_box_item--l ">A栋1楼</div>
+                                            <div class="bk_box_item  bk_box_item--s mla"><span class="bk_box_item_Text">10</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">3</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">4</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">5</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">6</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">7</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">8</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">9</span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="bk  bk--s">
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--m"><span class="bk_box_item_Text">1</span></div>
+                                            <div class="bk_box_item  bk_box_item--m  bk_box_item--active  mla"><span class="bk_box_item_Text">12</span></div>
+                                            <div class="bk_box_item  bk_box_item--m"><span class="bk_box_item_Text">11</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">2</span></div>
+                                            <div class="bk_box_item  bk_box_item--l ">A栋1楼</div>
+                                            <div class="bk_box_item  bk_box_item--s mla"><span class="bk_box_item_Text">10</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bk_box">
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">3</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">4</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">5</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">6</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">7</span></div>
+                                            <div class="bk_box_item  bk_box_item--s"><span class="bk_box_item_Text">8</span></div>
+                                            <div class="bk_box_item  bk_box_item--s  bk_box_item--active"><span class="bk_box_item_Text">9</span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="local_content_control">
+                            <div id="UpImage" name="change" value="上"></div>
+                            <div id="DownImage" name="change" value="下"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 計價資訊 end-->
+            <!-- 電費儲值 start-->
+            <div id="electricityBonus_content" class="is-hide">
+                <div class="electricityBonus">
+                    <div class="electricityBonus_title">
+                        <span>通康</span>
+                    </div>
+                    <div class="electricityBonus_content">
+                        <div class="electricityBonus_content_first">
+                            <div class="electricityBonus_content_item">
+                                <span>餘額</span>
+                                <input disabled="" class="input  input-box  input--m" type="text" value="3,000">
+                            </div>
+                            <div class="electricityBonus_content_item">
+                                <span>儲存金額</span>
+                                <input class="input  input-box  input--m" type="number" value="0">
+                            </div>
+                        </div>
+                        <div class="electricityBonus_content_second">
+                            <div class="electricityBonus_content_item">
+                                <span>總金額</span>
+                                <input disabled="" class="input  input-box  input--m" type="text" value="3,000">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="electricityBonus_button">
+                        <div class="button-credencial mla"></div>
+                        <div class="button-confirm mla"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 電費儲值 end-->
+            <!-- 簡訊管理 start-->
+            <div id="message_content" class="is-hide">
+                <div class="message">
+                    <div class="message_content">
+                        <div class="message_content_item">
+                            <span>可用簡訊數量</span>
+                            <input type="text" class="input  input-box  input--m" disabled value="3,000" />
+                        </div>
+                        <div class="message_content_item">
+                            <span>簡訊餘額</span>
+                            <input type="number" class="input  input-balance  input--m" disabled value="0" />
+                            <div class="message_Bonus"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 簡訊管理 end-->
+        </div>
+        <!-- 電費儲值 start-->
+        <!-- 電費儲值 end-->
+    </div>
+</div>
+<!-- @@close-->
+<!-- @@block  =  js-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap/bootstrap.js"></script>
+<script src="js/bootstrap/bootstrap-select.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/Action.js"></script>
+<script type="text/javascript">
+$('.bxslider').bxSlider({
+    mode: 'vertical',
+    minSlides: 2,
+    maxSlides: 2,
+    pager: false,
+    slideMargin: 15,
+    prevText: '<img class="UpImage"/>',
+    nextText: '<img class="DownImage"/>',
+    nextSelector: '#DownImage',
+    prevSelector: '#UpImage',
+});
+</script>
+<script>
+$("#electricity").click(function(event) {
+    $("#electricity_content").removeClass('is-hide').addClass('is-show');
+    $("#analysis_content").removeClass('is-show').addClass('is-hide');
+});
+
+$("#analysis").click(function(event) {
+    $("#electricity_content").removeClass('is-show').addClass('is-hide');
+    $("#analysis_content").removeClass('is-hide').addClass('is-show');
+});
+
+$("#valuation").click(function(event) {
+    $("#valuation_content").removeClass('is-hide').addClass('is-show');
+    $("#electricityBonus_content").removeClass('is-show').addClass('is-hide');
+    $("#message_content").removeClass('is-show').addClass('is-hide');
+});
+
+$("#ElectricityBonus").click(function(event) {
+    $("#electricityBonus_content").removeClass('is-hide').addClass('is-show');
+    $("#valuation_content").removeClass('is-show').addClass('is-hide');
+    $("#message_content").removeClass('is-show').addClass('is-hide');
+});
+
+$("#message").click(function(event) {
+    $("#message_content").removeClass('is-hide').addClass('is-show');
+    $("#valuation_content").removeClass('is-show').addClass('is-hide');
+    $("#electricityBonus_content").removeClass('is-show').addClass('is-hide');
+});
+
+$(".bxslider ul").click(function(event) {
+    $("ul").removeClass('bk--active');
+    $(this).addClass('bk--active');
+});
+</script>
+<script>
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+
+
+// 指定图表的配置项和数据
+var option = {
+    grid: {
+        show: true,
+        bottom: 30
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    }],
+    yAxis: [{
+        type: 'value',
+        name: '水量',
+        min: 0,
+        max: 250,
+        interval: 50,
+        axisLabel: {
+            formatter: '{value} ml'
+        }
+    }],
+    series: [{
+        name: '蒸发量',
+        type: 'bar',
+        data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+    }, {
+        name: '降水量',
+        type: 'bar',
+        data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+    }]
+};
+
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+<!-- @@close-->

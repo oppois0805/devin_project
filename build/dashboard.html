@@ -1,0 +1,2767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--[if lt IE 10]>
+    <style type="text/css">
+        .mla {
+            margin-left: 10px;
+        }
+    </style>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo">
+                <div class="l-menu_logo_image">
+                    <img src="images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title">
+                    <span class="l-title">
+                        系统管理员
+                    </span>
+                    <span class="l-title"> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <div class="l-menu_nav">
+                <div class="l-menu_nav_light active"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div>
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="dropdown">
+                        <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                        <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                            <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                    <div class="dashboard_top">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titlebuilding.png" alt="">
+                                    <span class="title">建物指標</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titleelectronic.png" alt="">
+                                    <span class="title">電力資訊</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titleair.png" alt="">
+                                    <span class="title">空調系統</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titlesurrounding.png" alt="">
+                                    <span class="title">環境資訊</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown_a" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/images/5_dashboard/titlesafety.png" alt="">
+                                    <span class="title">安防資訊</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" id="menu1" aria-labelledby="drop4">
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數</span><img src="/images/5_dashboard/widget-1-x-1.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-1-x-2.png" alt=""></a></li>
+                                    <li><a class="dropdown-menu_item" href="#"><span>性能指數總攬</span><img src="/images/5_dashboard/widget-2-x-1.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="button-group">
+                            <div class="button-back"></div>
+                            <div class="button-edit  button--gutter_left"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="dashboard_content">
+                        <div class="dashboard_content_top mla">
+                            <a id="LeftArrow"></a>
+                            <a id="RightArrow"></a>
+                        </div>
+                        <div class="dashboard_content_bottom">
+                            <ul class="bxslider">
+                                <!-- page1 -->
+                                <li>
+                                    <div class="test">
+                                        <!-- 即時氣象 -->
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1  env_met_1x1--sunny_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1 env_met_1x1--rain_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1  env_met_1x1--cloudy_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1  env_met_1x1--thunder_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1  env_met_1x1--sunny_color">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1 env_met_1x1--rain_color">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1  env_met_1x1--cloudy_color">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>即時氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x1  env_met_1x1--thunder_color">
+                                                    <div>
+                                                        <div>
+                                                            <span>16:30</span>
+                                                            <div>
+                                                                <div>
+                                                                    33°C
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <span>2016年8月29日</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>新北市</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv1_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv2_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv3_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv4_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv5_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv6_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv1_black">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv2_black">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv3_black">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv4_black">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- page2 -->
+                                <li>
+                                    <div class="test">
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv5_black">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv6_black">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv1_color">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv2_color">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1 env_pm25_1x1--lv3_color">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv4_color">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv5_color">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>PM2.5指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_pm25_1x1  env_pm25_1x1--lv6_color">
+                                                    <div>
+                                                        <div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <span></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                            <div>
+                                                                <span>315</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>室內環境</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_1x1">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>溫度</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">26</span>
+                                                                        <span>°C</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature" data-value="36" data-maxvalue="50" unit="°C" data-width="147" data-color='"#54b8e2", "#fee655","#f06846"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>濕度</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">62</span>
+                                                                        <span>%</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature" data-value="60" data-maxvalue="100" unit="°C" data-width="147" data-color='"#54b8e2","#d8ecf5"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>CO2</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">96</span>
+                                                                        <span>ppm</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature" data-value="18" data-maxvalue="50" unit="°C" data-width="147" data-color='"#54b8e2", "#a2a2a2"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>室外環境</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_1x1">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>溫度</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">26</span>
+                                                                        <span>°C</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature" data-value="25" data-maxvalue="50" unit="°C" data-width="147" data-color='"#54b8e2", "#fee655", "#f06846"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>濕度</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">62</span>
+                                                                        <span>%</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature" data-value="85" data-maxvalue="100" unit="°C" data-width="147" data-color='"#54b8e2", "#d8ecf5"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>pm2.5</div>
+                                                                    <div>
+                                                                        <span id="progressvalue">35</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="OI-Temperature" data-value="115" data-maxvalue="500" unit="°C" data-width="147" data-color='"#54b8e2", "#a2a2a2"' name="progress"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>室外環境</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_1x2">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>溫度</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature" data-value="25" data-maxvalue="50" unit="°C" data-width="167" data-color='"#54b8e2", "#fee655", "#f06846"' name="progress"></div>
+                                                                    <span>50</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">26</span>
+                                                                    <span>°C</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>濕度</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature" data-value="45" data-maxvalue="100" unit="°C" data-width="167" data-color='"#54b8e2", "#d8ecf5"' name="progress"></div>
+                                                                    <span>100</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">62</span>
+                                                                    <span>%</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>pm2.5</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature" data-value="300" data-maxvalue="500" unit="°C" data-width="167" data-color='"#54b8e2", "#a2a2a2"' name="progress"></div>
+                                                                    <span>500</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">296</span>
+                                                                    <span>ppm</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>室內環境</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_1x2">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>溫度</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature" data-value="44" data-maxvalue="50" unit="°C" data-width="167" data-color='"#54b8e2", "#fee655", "#f06846"' name="progress"></div>
+                                                                    <span>50</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">26</span>
+                                                                    <span>°C</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>濕度</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature" data-value="25" data-maxvalue="100" unit="°C" data-width="167" data-color='"#54b8e2", "#d8ecf5"' name="progress"></div>
+                                                                    <span>100</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">62</span>
+                                                                    <span>%</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div>CO2</div>
+                                                                <div>
+                                                                    <span id="percentagevalue">0</span>
+                                                                    <div class="OI-Temperature" data-value="120" data-maxvalue="500" unit="°C" data-width="167" data-color='"#54b8e2", "#a2a2a2"' name="progress"></div>
+                                                                    <span>500</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span id="progressvalue">296</span>
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- page3 -->
+                                <li>
+                                    <div class="test">
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x2  env_met_1x2--cloudy_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(五)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(六)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(日)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(一)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(二)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(三)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(四)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                            </div>
+                                                            <div id="container" name="BlackChart" style="min-width: 290px; height: 110px; margin: -25px auto"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x2  env_met_1x2--sunny_color">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(五)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(六)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(日)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(一)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(二)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(三)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(四)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                            </div>
+                                                            <div id="container2" name="WhiteChart" style="min-width: 290px; height: 110px; margin: -25px auto"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x2  env_met_1x2--rain_color">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(五)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(六)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(日)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(一)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(二)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(三)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-color.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <span>7/15</span>
+                                                                <span>(四)</span>
+                                                                <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                            </div>
+                                                            <div id="container2" name="WhiteChart" style="min-width: 290px; height: 110px; margin: -25px auto"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--sunny_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div id="container3" name="BlackChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--rain_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div id="container4" name="BlackChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--cloudy_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div id="container5" name="BlackChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--thunder_opacity">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-opacity.png" alt="">
+                                                                </div>
+                                                                <div id="container6" name="BlackChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- page4 -->
+                                <li>
+                                    <div class="test">
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--sunny_color">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div id="container7" name="WhiteChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--rain_color">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div id="container8" name="WhiteChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--cloudy_color">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div id="container9" name="WhiteChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x3">
+                                            <div class="db-block_title  db-block_title--env">
+                                                <span>一週氣象</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="env_met_1x3  env_met_1x3--thunder_color">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>16:30</span>
+                                                            </div>
+                                                            <div>
+                                                                <span>2016年8月29日</span>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span>新北市</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(五)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(六)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(日)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(一)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathersunny-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(二)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherthunder-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(三)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weatherrainy-week-color.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <span>7/15</span>
+                                                                    <span>(四)</span>
+                                                                    <img src="/images/5_dashboard/environment_met_image/weathercloudy-week-color.png" alt="">
+                                                                </div>
+                                                                <div id="container9" name="WhiteChart" style="min-width: 285px; height: 110px; margin: -25px auto"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                33°C
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- page5 -->
+                                <li>
+                                    <div class="test">
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--power">
+                                                <span>能源指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="power_1x1">
+                                                    <div>
+                                                        <div class="eui-round">EUI</div>
+                                                        <div>
+                                                            <span>(kW-h/m2-yr)</span>
+                                                        </div>
+                                                        <div>625</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="dui-round">DUI</div>
+                                                        <div>
+                                                            <span>(W/m2)</span>
+                                                        </div>
+                                                        <div>625</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="saving-round">EUI</div>
+                                                        <div>
+                                                            <span>(成長率%)</span>
+                                                        </div>
+                                                        <div>-45%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--power">
+                                                <span>能源指標</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="power_1x2">
+                                                    <div>
+                                                        <div>EUI</div>
+                                                        <div>
+                                                            <div>
+                                                                <div id="PowerIndicators1" name="circle" data-value="990" data-maxvalue="1200" data-size="90" data-color='"#409ef3", "#f06846"'></div>
+                                                            </div>
+                                                            <div class="ValueBlock">
+                                                                <strong id="circlevalue" name="power_1x2_value">0</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>DUI</div>
+                                                        <div>
+                                                            <div>
+                                                                <div id="PowerIndicators1" name="circle" data-value="1110" data-maxvalue="1200" data-size="90" data-color='"#6fd0dc", "#f06846"'></div>
+                                                            </div>
+                                                            <div class="ValueBlock">
+                                                                <strong id="circlevalue" name="power_1x2_value">0</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>節點成長率</div>
+                                                        <div>
+                                                            <div>
+                                                                <div id="PowerIndicators1" name="circle" data-value="550" unit="%" data-maxvalue="1200" data-size="90" data-color='"#a6ffb2"'></div>
+                                                            </div>
+                                                            <div class="ValueBlock">
+                                                                <strong id="circlevalue" name="power_1x2_value">0</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--electricity">
+                                                <span>本日用電量</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="electricity_1x1">
+                                                    <div>
+                                                        <div>
+                                                            <div name="circle" data-value="678" data-maxvalue="1200" data-size="123" data-color='"#abfeb1","#5a9ef3"'></div>
+                                                        </div>
+                                                        <div class="ValueBlock">
+                                                            <strong>
+                                                                區域A-1
+                                                            </strong>
+                                                            <strong id="circlevalue">
+                                                                0
+                                                            </strong>
+                                                            <strong>
+                                                                kWH
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--electricity">
+                                                <span>昨日用電量</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="electricity_1x2">
+                                                    <div style="width:350px;height:130px">
+                                                        <div id="main1" style="width:350px;height:170px;margin: -20px 0 0 -6px;" class="PowerChart"></div>
+                                                        <div style="width:83%;height:1px;margin: -57px 0 0 22px;background-color:rgba(0,0,0,.15)"></div>
+                                                    </div>
+                                                    <div>
+                                                        <strong>區域A</strong>
+                                                        <div>
+                                                            <strong>昨日總用電量</strong>
+                                                            <strong>6,825</strong>
+                                                            <strong>kWH</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_2x2">
+                                            <div class="db-block_title  db-block_title--electricity">
+                                                <span>本日用電量</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="electricity_2x2">
+                                                    <div>
+                                                        <div>
+                                                            <div name="circle" data-value="678" data-maxvalue="1200" data-size="275" data-color='"#abfeb1","#5a9ef3"'></div>
+                                                        </div>
+                                                        <div class="ValueBlock">
+                                                            <strong>
+                                                                區域A-1
+                                                            </strong>
+                                                            <strong id="circlevalue">
+                                                                0
+                                                            </strong>
+                                                            <strong>
+                                                                kWH
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--security">
+                                                <span>即時人數</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="security_nop_1x1 security_nop_1x1--lv3">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <strong>區域A-1</strong>
+                                                            </div>
+                                                            <div id="electricityIndicators2Value">
+                                                                <strong></strong>
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <span>無人</span>
+                                                                    <span>擁擠</span>
+                                                                </div>
+                                                                <div>
+                                                                    <div>
+                                                                        <span></span>
+                                                                        <span></span>
+                                                                        <span></span>
+                                                                        <span></span>
+                                                                        <span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--security">
+                                                <span>即時人數</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="security_mon_1x1">
+                                                    <div>
+                                                        <div>
+                                                            <iframe class="youtube-player" type="text/html" width="146" height="98.4" src="http://www.youtube.com/embed/p/PLAYLIST_ID" frameborder="0"> </iframe>
+                                                        </div>
+                                                        <div>
+                                                            區域A-1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_2x2">
+                                            <div class="db-block_title  db-block_title--security">
+                                                <span>即時人數</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="security_mon_2x2">
+                                                    <div>
+                                                        <div>
+                                                            <iframe class="youtube-player" type="text/html" width="324" height="231.3" src="http://www.youtube.com/embed/p/PLAYLIST_ID" frameborder="0"> </iframe>
+                                                        </div>
+                                                        <div>
+                                                            區域A-1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- page6 -->
+                                <li>
+                                    <div class="test">
+                                        <div class="db-block_1x1">
+                                            <div class="db-block_title  db-block_title--air">
+                                                <span>kW/RT</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="air_1x1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_1x2">
+                                            <div class="db-block_title  db-block_title--air">
+                                                <span>性能指數(COP)</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="air_1x2">
+                                                    <div>
+                                                        <div>
+                                                            <span>CH-01</span>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="3.1" data-maxvalue="10" data-width="80" unit="°C" data-color='"#54b8e2", "#fee655", "#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                            <span id="progressvalue">3.4</span>
+                                                        </div>
+                                                        <div></div>
+                                                        <div>
+                                                            <span>CH-01</span>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="9.8" data-maxvalue="10" data-width="80" unit="°C" data-color='"#54b8e2", "#fee655", "#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                            <span id="progressvalue">3.4</span>
+                                                        </div>
+                                                        <div></div>
+                                                        <div>
+                                                            <span>CH-01</span>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="2.8" data-maxvalue="10" data-width="80" unit="°C" data-color='"#54b8e2", "#fee655", "#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                            <span id="progressvalue">3.4</span>
+                                                        </div>
+                                                        <div></div>
+                                                        <div>
+                                                            <span>CH-01</span>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="6.8" data-maxvalue="10" data-width="80" unit="°C" data-color='"#54b8e2", "#fee655", "#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                            <span id="progressvalue">3.4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="db-block_2x1">
+                                            <div class="db-block_title  db-block_title--air">
+                                                <span>性能指數(COP)</span>
+                                                <div class="mla">
+                                                    <i class="fa fa-cog fa-1" name="setting" data-toggle="modal" data-target="#myAddtimeModal"></i>
+                                                    <i class="fa fa-times fa-1"></i>
+                                                </div>
+                                            </div>
+                                            <div class="db-block_content">
+                                                <div class="air_2x1">
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <span>CH-01</span>
+                                                            </div>
+                                                            <div>
+                                                                <span id="progressvalue">9.4</span>
+                                                            </div>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="8.2" data-maxvalue="10" data-width="60" data-color='"#54b8e2", "#fee655", "#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div></div>
+                                                        <div>
+                                                            <div>
+                                                                <span>CH-01</span>
+                                                            </div>
+                                                            <div>
+                                                                <span id="progressvalue">9.4</span>
+                                                            </div>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="1.2" data-maxvalue="10" data-width="60" data-color='"#54b8e2", "#fee655", "#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div></div>
+                                                        <div>
+                                                            <div>
+                                                                <span>CH-01</span>
+                                                            </div>
+                                                            <div>
+                                                                <span id="progressvalue">9.4</span>
+                                                            </div>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="7.4" data-maxvalue="10" data-width="60" data-color='"#54b8e2","#fee655","#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div></div>
+                                                        <div>
+                                                            <div>
+                                                                <span>CH-01</span>
+                                                            </div>
+                                                            <div>
+                                                                <span id="progressvalue">9.4</span>
+                                                            </div>
+                                                            <div>
+                                                                <div class="OI-Temperature" data-value="9.2222" data-maxvalue="10" data-width="60" data-color='"#54b8e2","#fee655","#f06846"' data-decimal="1" name="progress"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--網頁內容Tab End-->
+                </div>
+        </aside>
+        <!--網頁內容 End-->
+        </div>
+        <div class="modal fade" id="myAddtimeModal" role="dialog">
+            <div class="modal-dialog  modal-dialog--addtime">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <span class="modal-title_main_title">設定</span>
+                        </div>
+                        <hr />
+                    </div>
+                    <div class="modal-body">
+                        <div class="DialogContent">
+                            標題
+                            <input type="text" id="main-title">
+                            <br>
+                        </div>
+                        <div class="modal-footer">
+                            <hr />
+                            <button type="button" class="btn btn-primary" id="save-setting">儲存</button>
+                            <button type="button" class="btn  btn-default" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/bootstrap/bootstrap.js"></script>
+        <script src="js/echarts.common.min.js"></script>
+        <script src="js/jquery.simpleWeather.min.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/gauge.min.js"></script>
+        <script src="js/echarts.min.js"></script>
+        <script src="js/gradient-progress-bar.js"></script>
+        <script src="js/circle-progress.min.js"></script>
+        <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+        <script type="text/javascript">
+        //1x1及時人數
+        setInterval(function() {
+            var randomvalue = getRandomInt(1, 5);
+            $(".security_nop_1x1").removeClass($(".security_nop_1x1").attr("class").split(" ")[1]);
+            $(".security_nop_1x1").addClass('security_nop_1x1--' + "lv" + randomvalue);
+        }, 2000)
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //昨日用電量1x2
+        var xAxisData = [];
+        var data1 = [];
+
+        for (var i = 1; i <= 24; i++) {
+            xAxisData.push(i + '點');
+            if (i <= 12) {
+                data1.push(i * 1000);
+            } else {
+                data1.push(12000 + (12000 - i * 1000));
+            }
+        }
+
+        var myChart2 = echarts.init(document.getElementById('main1'));
+
+        var option2 = {
+            tooltip: {},
+            xAxis: {
+                data: xAxisData,
+                silent: false,
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(0,0,0,0)'
+                    }
+                },
+                splitLine: {
+                    show: false
+                }
+            },
+            yAxis: [{
+                type: 'value',
+                scale: true,
+                name: '00:00',
+                max: 10000,
+                min: 0,
+                nameTextStyle: {
+                    fontSize: 15
+                },
+                axisLabel: {
+                    show: false
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(0,0,0,0.3)'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {
+                    show: false
+                },
+                boundaryGap: [0.2, 0.2]
+            }, {
+                type: 'value',
+                scale: true,
+                name: '24:00',
+                max: 0,
+                min: 0,
+                nameTextStyle: {
+                    fontSize: 15
+                },
+                axisLabel: {
+                    show: false
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(0,0,0,0.3)'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {
+                    show: false
+                },
+                boundaryGap: [0.2, 0.2]
+            }],
+            series: [{
+                name: '用電量',
+                type: 'bar',
+                data: data1,
+                barGap: '550%',
+                itemStyle: {
+                    normal: {
+                        color: '#009DF0',
+                        barBorderRadius: 12
+                    }
+                },
+                animationDelay: function(idx) {
+                    return idx * 10;
+                }
+            }],
+            animationEasing: 'elasticOut',
+            animationDelayUpdate: function(idx) {
+                return idx * 5;
+            }
+        };
+        myChart2.setOption(option2);
+
+        //progress
+        $('div[name=progress]').each(function() {
+            var option = $(this),
+                value = (option.data("value") / option.data("maxvalue")).toFixed(2),
+                color = JSON.parse('[' + option.data("color") + ']'),
+                decimal = (option.data("decimal") !== 1) ? 0 : 1;
+
+            $(option).gradientProgressBar({
+                value: value,
+                size: option.data("width"),
+                lineCap: "round",
+                thickness: 10,
+                animation: {
+                    duration: 3000
+                },
+                fill: {
+                    gradient: color
+                }
+            }).on('progress-bar-animation-progress ', function(event, animationProgress, stepValue) {
+                var number = option.data("maxvalue") * stepValue;
+                option.parent().parent().find('#progressvalue').html(number.toFixed(option.data("decimal")));
+                option.parent().parent().find('#percentagevalue').html(number.toFixed(option.data("decimal")));
+            });
+
+            //setInterval(function() {
+            $(option).gradientProgressBar({
+                value: 0
+            });
+            $(option).gradientProgressBar({
+                value: value
+            });
+            //}, 4000)
+        });
+
+        //能源指標
+        $("div[name=circle]").each(function(index, el) {
+            var option = $(el);
+            var color = JSON.parse('[' + option.data("color") + ']');
+            var get_percentage = (option.data("value") / option.data("maxvalue")).toFixed(2);
+
+            option.circleProgress({
+                value: get_percentage,
+                size: option.data("width"),
+                startAngle: 1.6,
+                lineCap: "round",
+                thickness: "auto",
+                fill: {
+                    gradient: color
+                }
+            }).on('circle-animation-progress', function(event, progress, stepValue) {
+                var number = option.data("maxvalue") * stepValue;
+                if (index === 2) {
+                    option.parent().parent().find('#circlevalue').html(Math.round(100 * stepValue) + "%");
+                } else {
+                    option.parent().parent().find('#circlevalue').html(Math.round(number));
+                }
+            });
+
+            option.circleProgress({
+                value: 0
+            });
+            option.circleProgress({
+                value: parseInt(option.data("value")) / option.data("maxvalue")
+            });
+        });
+
+        //開始與結束編輯
+        $(".button-edit").click(function(event) {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(".button-back").fadeOut('slow');
+                $(".nav").fadeOut('slow');
+            } else {
+                $(this).addClass('active');
+                $(".button-back").fadeIn('slow');
+                $(".nav").fadeIn('slow');
+            }
+        });
+
+        //取消編輯
+        $(".button-back").click(function(event) {
+            $(this).fadeOut('slow');
+            $(".button-edit").removeClass('active');
+            $(".nav").fadeOut('slow');
+        });
+
+        //切換頁面
+        $('.bxslider').bxSlider({
+            startSlide: 1,
+            hideControlOnEnd: false,
+            minSlides: 1,
+            maxSlides: 1,
+            slideWidth: 1090,
+            prevText: '<div class="button-left"></div>',
+            nextText: '<div class="button-right button--gutter_left"></div>',
+            nextSelector: '#RightArrow',
+            prevSelector: '#LeftArrow',
+            slideMargin: 10
+        });
+
+        //白色hightchart
+        $("div[name=WhiteChart]").each(function(index, el) {
+            $(this).highcharts({
+                chart: {
+                    type: 'areaspline'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    enabled: true
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false,
+                },
+                yAxis: {
+                    visible: false,
+                },
+                tooltip: {
+                    formatter: function() {
+                        return "溫度: " + this.y + "°C";
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            linearGradient: {
+                                x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                            },
+                            stops: [
+                                [0, 'rgba(255,255,255, 1)'],
+                                [0.5, 'rgba(255,255,255, .5)'],
+                                [1, 'rgba(255,255,255, 0)'],
+                            ]
+                        },
+                        marker: {
+                            radius: 2
+                        },
+                        lineWidth: 1,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+                chart: {
+                    backgroundColor: 'rgba(255,255,255,0)',
+                    polar: true,
+                    type: 'line'
+                },
+                series: [{
+                    showInLegend: false,
+                    type: 'area',
+                    name: '溫度',
+                    data: [12, 24, 31, 22, 36, 32, 22],
+                    zones: [{
+                        value: 0,
+                        color: '#fff'
+                    }, {
+                        value: 100,
+                        color: '#fff'
+                    }]
+                }]
+            });
+
+        });
+
+        //黑色hightchart
+        $("div[name=BlackChart]").each(function(index, el) {
+            $(this).highcharts({
+                chart: {
+                    type: 'areaspline'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    enabled: true
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false,
+                },
+                yAxis: {
+                    visible: false,
+                },
+                tooltip: {
+                    formatter: function() {
+                        return "溫度: " + this.y + "°C";
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            linearGradient: {
+                                x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                            },
+                            stops: [
+                                [0, 'rgba(8,26,46, 1)'],
+                                [0.5, 'rgba(8,26,46, 0.5)'],
+                                [1, 'rgba(8,26,46, 0)'],
+                            ]
+                        },
+                        marker: {
+                            radius: 2
+                        },
+                        lineWidth: 1,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+                chart: {
+                    backgroundColor: 'rgba(255,255,255,0)',
+                    polar: true,
+                    type: 'line'
+                },
+                series: [{
+                    showInLegend: false,
+                    type: 'area',
+                    name: '溫度',
+                    data: [12, 24, 31, 22, 36, 32, 22],
+                    zones: [{
+                        value: 0,
+                        color: '#081a2e'
+                    }, {
+                        value: 100,
+                        color: '#081a2e'
+                    }]
+                }]
+            });
+        });
+        </script>
+</body>
+
+</html>

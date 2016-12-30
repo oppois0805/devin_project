@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>saving_build</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <div class="l-wrap">
+        <!--網頁頂左側Menu Start-->
+        <section class="l-menu">
+            <div class="l-menu_logo  flex-cbc">
+                <div class="l-menu_logo_image">
+                    <img src="images/navigation/img_sidenav_logo.png" alt="主選單圖片">
+                </div>
+                <div class="l-menu_logo_title  flex-c">
+                    <span class="l-title">
+                        系统管理员
+                    </span>
+                    <span class="l-title"> 宏汇国际广场
+                    </span>
+                </div>
+                <div class="l-menu_logo_menuimage">
+                    <img src="images/navigation/img_sidenav_mainmenu.png" alt="主選單圖片">
+                </div>
+            </div>
+            <ul class="l-menu_nav" id="menu">
+                <li class="l-menu_nav_light">
+                    <div style="display: none">123</div>
+                </li>
+                <li class="l-menu_nav_Air l-menu_has_child">
+                    <ul class="l-menu_child_nav">
+                        <li>
+                            <div>展示</div>
+                        </li>
+                        <li>
+                            <div>管理</div>
+                        </li>
+                        <li>
+                            <div>分析</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="l-menu_nav_power">
+                    <div style="display: none">123</div>
+                </li>
+                <li class="l-menu_nav_curtain">
+                    <div style="display: none">123</div>
+                </li>
+            </ul>
+            <!--  <div class="l-menu_nav">
+                <div class="l-menu_nav_light active"></div>
+                <div class="l-menu_nav_Air"></div>
+                <div class="l-menu_nav_power"></div>
+                <div class="l-menu_nav_curtain"></div>
+            </div> -->
+        </section>
+        <!--網頁頂左側Menu End-->
+        <!--網頁內容 Start-->
+        <aside class="l-wrapper">
+            <div class="l-wrapper_nav  flex-r">
+                <div class="l-wrapper_nav_home"></div>
+                <div class="l-wrapper_nav_message"></div>
+                <div class="l-wrapper_nav_schedule"></div>
+                <div class="btn-group">
+                    <div class="l-wrapper_nav_setting dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                    <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li><a href="javascript:void(0)" role="tab" id="setting">租賃設定</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">RTU資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">建案資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown2">大樓資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown2">樓層資料維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown2">空調即時資訊底圖維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表維護</a></li>
+                        <li><a href="javascript:void(0)" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown2">空調圖表Tag設定</a></li>
+                    </ul>
+                </div>
+                <div class="l-wrapper_nav_logout"></div>
+            </div>
+            <div class="l-wrapper_content">
+                <!--網頁內容Top Start-->
+                <div class="l-wrapper_content_top">
+                    <select class="selectpicker  select  select--l">
+                        <option class="option">即時資訊</option>
+                    </select>
+                    <select class="selectpicker select  select--l select--gutter_left">
+                        <option class="option">建物用電</option>
+                        <option class="option">電力系統</option>
+                    </select>
+                </div>
+                <!--網頁內容Top End-->
+                <!--網頁內容Tab Start-->
+                <div class="l-wrapper_bottom_content">
+                    <div class="saving">
+                        <div class="saving_build">
+                            <div class="information  information--l">
+                                <div class="information_title">即時資訊</div>
+                                <div class="information_content">
+                                    <div class="building_instant">
+                                        <table>
+                                            <thead>
+                                                <tr class="tr">
+                                                    <th class="grid-9">
+                                                    </th>
+                                                    <th class="grid-1">
+                                                    </th>
+                                                    <th class="grid-2">
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>本月累計總用電量：</td>
+                                                    <td>0</td>
+                                                    <td>kWh</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>本年累計總用電量：</td>
+                                                    <td>2,623,745</td>
+                                                    <td>kWh</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>本年累積碳排放量：</td>
+                                                    <td>1,406,327</td>
+                                                    <td>kWh</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <thead>
+                                                <tr class="tr">
+                                                    <th class="grid-9">
+                                                    </th>
+                                                    <th class="grid-1">
+                                                    </th>
+                                                    <th class="grid-2">
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>即時用電：</td>
+                                                    <td>3,544</td>
+                                                    <td>kW</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>15分鐘用電預測：</td>
+                                                    <td>1,333,444</td>
+                                                    <td>kW</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>本日累計總用電量：</td>
+                                                    <td>1,922</td>
+                                                    <td>kWh</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="information  information--m">
+                                <div class="information_title">前六個月用電</div>
+                                <div class="information_content">
+                                    <div class="building_sm">
+                                        <div id="main1" name="linechart" class="building_sixmonths_chart"></div>
+                                        <div class="building_sixmonths_unit">(kWh)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="building_tab">
+                                <ul class="nav nav-tabs">
+                                    <li><a data-toggle="tab" href="#home">累積用電趨勢圖</a></li>
+                                    <li><a data-toggle="tab" href="#menu1">前六個月用電</a></li>
+                                    <li class="active"><a data-toggle="tab" href="#menu2">昨日用電</a></li>
+                                    <li><a data-toggle="tab" href="#menu3">前一小時用電</a></li>
+                                    <li><a data-toggle="tab" href="#menu4">需量趨勢圖</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="home" class="tab-pane fade">
+                                        <div class="building_tab_trend">
+                                            <div id="main2" name="linechart" class="building_tab_trend_chart"></div>
+                                            <div class="building_tab_trend_unit">(單位:kWh)</div>
+                                        </div>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                        <div class="building_tab_sm">
+                                            <div class="building_tab_sm_top">
+                                                <select class="selectpicker  select  select--l">
+                                                    <option class="option">建物總用電</option>
+                                                    <option class="option">空調系統用電</option>
+                                                    <option class="option">插座系統用電</option>
+                                                    <option class="option">電腦機房用電</option>
+                                                    <option class="option">無塵室用電</option>
+                                                </select>
+                                                <div class="building_tab_sm_top_date">
+                                                    <span>日期範圍：</span>
+                                                    <input type="text" class="input  input--m" name="datepicker"> &nbsp;&nbsp;~
+                                                    <input type="text" class="input  input--m" name="datepicker">
+                                                </div>
+                                                <div class="building_tab_sm_top_btn">
+                                                    <div class="button-saving-ok"></div>
+                                                    <div class="button-saving-excel button--gutter_left"></div>
+                                                </div>
+                                            </div>
+                                            <div class="building_tab_sm_content">
+                                                <div id="main3" name="linechart" class="building_tab_sm_content_chart"></div>
+                                                <div class="building_tab_sm_content_unit">(單位:kWh)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="menu2" class="tab-pane fade  in active">
+                                        <div class="building_tab_ye">
+                                            <div class="building_tab_ye_top">
+                                                <select class="selectpicker  select  select--l">
+                                                    <option class="option">建物總用電</option>
+                                                    <option class="option">空調系統用電</option>
+                                                    <option class="option">插座系統用電</option>
+                                                    <option class="option">電腦機房用電</option>
+                                                    <option class="option">無塵室用電</option>
+                                                </select>
+                                                <div class="building_tab_ye_top_date">
+                                                    <div class="button-saving-prev"></div>
+                                                    <span>2016/10/05</span>
+                                                    <div class="button-saving-next button--gutter_left"></div>
+                                                </div>
+                                                <div class="building_tab_ye_top_time">
+                                                    <input type="radio" id="rblType_1" name="rblType">
+                                                    <label for="rblType_1">全天</label>
+                                                    <input type="radio" id="rblType_2" name="rblType">
+                                                    <label for="rblType_2">白天</label>
+                                                    <input type="radio" id="rblType_3" name="rblType">
+                                                    <label for="rblType_3">晚上</label>
+                                                </div>
+                                            </div>
+                                            <div class="building_tab_ye_content">
+                                                <span style="height: 100%;display:flex;justify-content: center;align-items: center;font-size: 26px">資料不足</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="menu3" class="tab-pane fade">
+                                        <div class="building_tab_1he">
+                                            <div class="building_tab_1he_top">
+                                                <select class="selectpicker  select  select--l">
+                                                    <option class="option">建物總用電</option>
+                                                    <option class="option">空調系統用電</option>
+                                                    <option class="option">插座系統用電</option>
+                                                    <option class="option">電腦機房用電</option>
+                                                    <option class="option">無塵室用電</option>
+                                                </select>
+                                            </div>
+                                            <div class="building_tab_ye_content">
+                                                <span style="height: 100%;display:flex;justify-content: center;align-items: center;font-size: 26px">資料不足</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="menu4" class="tab-pane fade">
+                                        <div class="building_tab_dt">
+                                            <div class="building_tab_dt_top">
+                                                <div class="building_tab_dt_top_date">
+                                                    <span>日期：</span>
+                                                    <input type="text" class="input  input--m" name="datepicker"> &nbsp;&nbsp;~
+                                                    <input type="text" class="input  input--m" name="datepicker">
+                                                </div>
+                                                <div class="building_tab_dt_top_btn">
+                                                    <div class="button-saving-ok"></div>
+                                                    <div class="button-saving-excel button--gutter_left"></div>
+                                                </div>
+                                            </div>
+                                            <div class="building_tab_dt_content">
+                                                <div id="main4" name="linechart" class="building_tab_dt_content_chart"></div>
+                                                <div class="building_tab_dt_content_unit">(單位:kWh)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--網頁內容Tab End-->
+            </div>
+        </aside>
+        <!--網頁內容 End-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap-slider.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/Action.js"></script>
+    <script>
+    $(function() {
+
+        $("#menu").menu({
+            classes: {
+                "ui-menu": "highlight"
+            }
+        });
+
+        $("#tabs").tabs();
+
+        $("input[name=datepicker]").each(function(index, el) {
+            $(this).datepicker({
+                showOn: "button",
+                buttonImage: "images/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+
+    });
+
+    var myChart1 = echarts.init(document.getElementById('main1'));
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    var myChart3 = echarts.init(document.getElementById('main3'));
+    var myChart4 = echarts.init(document.getElementById('main4'));
+    var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['蒸发量', '降水量'],
+            top: 30
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        }],
+        yAxis: [{
+            type: 'value',
+            min: 0,
+            max: 400,
+            axisLabel: {
+                formatter: '{value}w'
+            },
+        }, {
+            type: 'value',
+            axisLabel: {
+                show: false
+            },
+            axisLabel: {
+                show: false
+            },
+            axisLine: {
+                show: false,
+            },
+            axisTick: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            min: 0,
+            max: 400,
+        }],
+        series: [{
+            name: '蒸发量',
+            type: 'bar',
+            data: [0, 100, 150, 200, 400, 125, 150, 235, 300, 350, 122, 333]
+        }, {
+            name: '降水量',
+            type: 'bar',
+            data: [0, 100, 150, 200, 400, 125, 150, 235, 300, 350, 122, 333]
+
+        }]
+    };
+
+    var option2 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['蒸发量', '降水量'],
+            top: 15
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        }],
+        yAxis: [{
+            type: 'value',
+            min: 0,
+            max: 400,
+            axisLabel: {
+                formatter: '{value}w'
+            },
+        }, {
+            type: 'value',
+            axisLabel: {
+                show: false
+            },
+            axisLabel: {
+                show: false
+            },
+            axisLine: {
+                show: false,
+            },
+            axisTick: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            min: 0,
+            max: 400,
+        }],
+        series: [{
+            name: '蒸发量',
+            type: 'bar',
+            data: [0, 100, 150, 200, 400, 125, 150, 235, 300, 350, 122, 333]
+        }, {
+            name: '降水量',
+            type: 'bar',
+            data: [0, 100, 150, 200, 400, 125, 150, 235, 300, 350, 122, 333]
+
+        }]
+    };
+
+    myChart1.setOption(option);
+    myChart2.setOption(option2);
+    myChart3.setOption(option);
+    myChart4.setOption(option);
+    </script>
+</body>
+
+</html>

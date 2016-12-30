@@ -1,0 +1,39 @@
+/* ==========================================================================
+   撰寫light
+   ========================================================================== */
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.information
+	display: block
+
+.analysis
+	@extend %ccc
+
+.analysis_top
+	width: 100%
+	display: flex
+
+.analysis_content
+	margin-top: 35px
+	
+.modal-body_light
+	@extend %ccc
+
+.modal-body_light_value
+	@extend %rcc
+
+.modal-body_light_progress
+	@extend %rcc
+
+// -------------------------------------
+//   @extend
+// -------------------------------------
+
+%rcc
+	+flex(row,center,center)
+
+%ccc
+	+flex(column,center,center)

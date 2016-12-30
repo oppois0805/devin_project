@@ -1,0 +1,44 @@
+/* ==========================================================================
+   chiller
+   ========================================================================== */
+
+$chiller-width: 700px
+$chiller-height: 400px
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.chiller
+	width: 100%
+	height: 100%
+	+flex(row, center, center)
+
+.chiller_content
+	background-color: $white_opacity_30
+	width: $chiller-width
+	height: $chiller-height
+	+flex(column, center, center)
+
+.chiller_content_item
+	width: 70%
+	margin: 12px 0 12px 0
+	+flex(row, flex-start, center)
+	&:last-child
+		+flex(row, flex-end, center)
+
+.chiller_content_item_title
+	width: 15%
+
+.chiller_content_item_check
+	width: 85%
+	+flex(row, space-around, center)
+	> label
+		+flex(row, center, center)
+		cursor: pointer
+		
+.chiller_content_item_time
+	width: 85%
+	+flex(row, center, center)
+	> *
+		margin: 0 5px 0 5px !important
